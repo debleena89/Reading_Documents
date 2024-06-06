@@ -1,0 +1,57 @@
+$date
+      Thu Sep 15 15:34:21 2022
+
+$end
+$version
+      Veriwell 2.8.7
+$end
+$timescale
+      1s
+$end
+
+
+$scope module muxtest $end
+$var reg      16 !    A [15:0] $end
+$var reg       4 "    S [3:0] $end
+$var wire      1 #    F  $end
+
+$scope module M $end
+$var wire      1 $    out  $end
+$var wire      4 %    sel [3:0] $end
+$var wire     16 &    in [15:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions      $end
+#0
+$dumpvars
+bx &
+bx %
+x$
+x#
+bx "
+bx !
+$end
+#5
+b11111100001010 !
+b0 "
+b11111100001010 &
+b0 %
+0$
+0#
+#10
+b1 "
+b1 %
+1$
+1#
+#15
+b110 "
+b110 %
+0$
+0#
+#20
+b1100 "
+b1100 %
+1$
+1#

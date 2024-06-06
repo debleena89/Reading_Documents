@@ -1,0 +1,3154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns:mml="http://www.w3.org/1998/Math/MathML" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brazil - Some issues in real-time systems 
+verification using time Petri Nets Some issues in real-time systems 
+verification using time Petri Nets </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Some issues in real-time systems verification using time Petri Nets">
+<meta property="og:description" content="Time Petri Net (TPN) models have been widely used to the specification and verification of...">
+<meta property="og:image" content="http://www.scielo.br/media/images/jbsmse_glogo.gif">
+<!-- social share tags -->
+
+<meta name="citation_author" content="Foyo, Pedro M. González del">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Pernambuco">
+        
+        <meta name="citation_author" content="Silva, José Reinaldo">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_journal_title" content="Journal of the Brazilian Society of Mechanical Sciences and Engineering">
+<meta name="citation_journal_abbrev" content="J. Braz. Soc. Mech. Sci. &amp; Eng.">
+<meta name="citation_journal_abbrev" content="J. Braz. Soc. Mech. Sci. &amp; Eng.">
+<meta name="citation_publisher" content="Associação Brasileira de Engenharia e Ciências Mecânicas - ABCM">
+<meta name="citation_volume" content="33">
+<meta name="citation_number" content="4">
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en&amp;format=pdf">
+<meta name="citation_xml_url" content="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?format=xml&amp;lang=en">
+<meta name="citation_firstpage" content="467">
+    <meta name="citation_lastpage" content="474">
+    <meta name="citation_doi" content="10.1590/S1678-58782011000400010">
+
+<meta name="citation_fulltext_world_readable" content="">
+
+<meta name="citation_issn" content="1678-5878">
+<meta name="citation_issn" content="1806-3691">
+<meta name="citation_title" content="
+            Some issues in real-time systems verification using time Petri Nets
+            ">
+
+<meta name="citation_language" content="en">
+
+<meta name="citation_abstract" content="Time Petri Net (TPN) models have been widely used to the specification and verification of real-time systems. However, the claim that most of these techniques are useful for real-time system verification can be discussed, based on two assumptions: i) to be suitable for real-time systems verification, a technique must be able to check timing properties, both safe and behavioral, and ii) the underlying algorithm must be efficient enough to be applied to complex systems design. In this paper we will discuss the suitability of commonly accepted verification techniques that use model-checking as a verification framework and TPN as a description model. We present a new algorithmic approach that allows computation of end-to-end time between activities over an abstract state space model. The proposed approach needs to compute the abstract state space only once improving the efficiency of the verification process and turning it suitable for large problems. We also introduce a new sufficient condition for abstract states space to preserve the branching time properties that yields more compact graphs than the condition already used in actual approaches. The approach would fit a design environment also based on Petri Nets called GHENeSys (General Hierarchical Enhanced Petri Nets). The results obtained, using our verification approach are compared with similar available approaches.">
+<meta name="citation_article_type" content="research-article">
+<meta name="citation_publication_date" content="2011-12">
+<meta name="citation_keywords" content="formal verification"><meta name="citation_keywords" content="Time Petri Nets"><meta name="citation_keywords" content="real-time systems"><meta name="citation_keywords" content="abstract state space">
+
+
+    <link rel="icon" href="https://www.scielo.br/static/img/favicon.ico">
+    <link rel="stylesheet" href="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scielo-bundle.css">
+    <link rel="stylesheet" href="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scielo-bundle-print.css" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script type="text/javascript" async="" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-1eZXe/MLiopvjKxX8F0I+6LXJu6cDaNupm7t7qbmZNrERttjt+hLGDuOPUES/50P"></script><script async="" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/js.js"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scielo-article.css" type="text/css" async="">
+
+
+  <link id="plx-css-popup" type="text/css" rel="stylesheet" href="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/popup.css"><script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/jquery.min.js"></script><script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/xss.js"></script><script id="altmetric-embed-js" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/altmetric_badges-4b75721c66722d87e7882ff5b18f12d295f4ac71b1a8.js"></script><style>.AT5rL7aTm8KKajD1LMmpXg\=\= {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+    transition: opacity 200ms ease-in-out;
+
+    padding: 16px;
+
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 37px 0px rgba(0,0,0,0.05);
+
+    z-index: 9999;
+
+    width: 250px;
+    height: auto;
+
+    cursor: pointer;
+}
+
+._2Xtymibu3VEV-gq1N5m\+aA\=\= {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="top"]:after, .AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="top"]:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="top"]:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #FFFFFF;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="top"]:before {
+	border-color: rgba(235, 235, 235, 0);
+	border-top-color: #ebebeb;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="left"]:after, .AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="left"]:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="left"]:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="left"]:before {
+	border-color: rgba(235, 235, 235, 0);
+	border-left-color: #ebebeb;
+	border-width: 11px;
+	margin-top: -11px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="right"]:after, .AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="right"]:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="right"]:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="right"]:before {
+	border-color: rgba(235, 235, 235, 0);
+	border-right-color: #ebebeb;
+	border-width: 11px;
+	margin-top: -11px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="bottom"]:after, .AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="bottom"]:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="bottom"]:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #FFFFFF;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+.AT5rL7aTm8KKajD1LMmpXg\=\=[data-placement="bottom"]:before {
+	border-color: rgba(235, 235, 235, 0);
+	border-bottom-color: #ebebeb;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.poEjDAx2EewNn\+kdnuCNbw\=\= {
+    /* So it doesn't get wider than the badge itself
+     * based on the width of the container */
+}
+
+.MlC\+r-CmnNCcLkgYD8Dr3A\=\= {
+    font-size: 14px;
+}
+
+
+.JqOPSu81MQ6f4Zf9z\+kqGA\=\= {
+    line-height: 1.5;
+}
+
+.GPqI5vpEM4VpfAAz4n7HHw\=\= {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.-hEUP2QMiuX6a9sr7dC-lw\=\= {
+	margin: 0.5rem 0;
+	font-weight: bold;
+}
+
+.LzVcQqdJWiY7N8-Sq-TVuQ\=\= {
+    display: inline-block;
+}
+
+.VbAViV4Slh84iH9X2erp\+w\=\= {
+	display: inline;
+}
+
+.f3QM6zcZemgDMSOwqIK2TA\=\= {
+    display: block;
+	margin: 0.5rem 0;
+	margin-left: 1rem;
+}
+
+.bcxXMmw49C9aDY85vGYeXQ\=\= {
+    color: #828179;
+}
+
+.lrdLQN2-BBgxsMDjSuuRzA\=\= {
+    font-weight: bold;
+    color: black;
+}
+
+.sUhEpXXzA4dizL2jxbvHFA\=\= {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    transition: 200ms opacity ease-in-out;
+}
+
+.sUhEpXXzA4dizL2jxbvHFA\=\=:hover, .sUhEpXXzA4dizL2jxbvHFA\=\=:active {
+    opacity: 0.8;
+}
+
+._13xrsxGwhLy89Cqv\+5JjQw\=\= {
+    display: inline-block;
+    background-color: #0062FF;
+
+    border-radius: 6px;
+
+    padding: 6px 12px;
+	margin-top: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: background-color 200ms ease-in-out;
+}
+
+._13xrsxGwhLy89Cqv\+5JjQw\=\=:hover {
+    background-color: #4da3ff;
+
+    /* For (a) site(s) that specifies a:hover color to be inherit */
+    color: white;
+
+}
+
+._80i\+8Z8J94Dfk-D9w-MGTw\=\= {
+  display: block;
+  width: 5em;
+}
+
+.WtCeh9Ck5GR\+4htw\+R1oCg\=\= {
+	display: block;
+	margin: 0.5rem 0;
+}
+
+
+.V5f0vIfUVJ2Syht6KzU80Q\=\= {
+	color: #D84215;
+	font-weight: bold;
+}
+
+.AvwIr2RDj3wSP30wVV5UDw\=\= {
+	color: black;
+	font-weight: bold;
+}
+</style><style>@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap);</style><style>@font-face{font-family:scite-icons;font-style:normal;font-weight:400;src:url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.eot?v=5);src:url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.eot?v=5#iefix) format("embedded-opentype"),url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.woff2?v=5) format("woff2"),url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.woff?v=5) format("woff"),url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.ttf?v=5) format("truetype"),url(https://cdn.scite.ai/assets/fonts/scite-icons/scite-icons.svg?v=5#fontello) format("svg")}.Icon__icon___rkFdu{speak:none;font-family:scite-icons!important;font-style:normal!important;font-variant:normal!important;font-weight:400!important;line-height:1.5!important;text-transform:none!important}.Icon__unclassified___KG7dh:before{color:#828179;content:"\e80a"}.Icon__contrasting___XemUp:before{color:#0062ff;content:"\e80a"}.Icon__mentioning___eZSXr:before{color:#393f43;content:"\e902"}.Icon__supporting___6A01H:before{color:#26a65b;content:"\e903"}.Icon__retractions___\+fJ\+N:before{color:#ff3b30;content:"\e901"}.Icon__notices___DbL2K:before{color:#82807d;content:"\e90a"}.Icon__publications___3dd2q:before{color:#82807d;content:"\e90b"}.Icon__smallIcon___3rDRZ{line-height:1rem!important}.Icon__openingArrow___pSL8O:before{color:#82807d;content:"\e922"}.Icon__closingCaret___EMT7i:before{color:#82807d;content:"\e925"}.Count__count___VwSFw{display:flex;font-size:14.5px}.Count__label___UClje{display:inline-block;margin-right:12px;text-transform:capitalize;width:82px}.Count__smallLabel___E3KvK{margin-right:6px;text-transform:capitalize}.Count__iconCountWrapper___CTSi2{box-sizing:border-box;display:inline-block}.Count__sectionTallyIconCountWrapper___lTlUR{box-sizing:border-box;display:flex}.Count__expandedIconCount___c3tc2{align-items:center;display:inline-flex;justify-content:space-between;width:100%}.Count__number___4oBqJ{margin-left:8px}.Count__smallNumber___wi6E7{margin-left:6px}.Count__horizontal___wp4Sz{border-left:1px solid #cfcfcf;padding:4px 8px}.Count__horizontal___wp4Sz:first-child{border-left:none}.Count__horizontal___wp4Sz>.Count__label___UClje{width:auto}.Count__horizontal___wp4Sz>.Count__sectionTallyIconCountWrapper___lTlUR>.Count__label___UClje{vertical-align:middle;width:auto}.Count__small___kecST{font-size:10px;padding:2px 4px}.Tally__tally___wF-n7 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.Tally__tally___wF-n7{background-color:#fff;color:#0e1d1a;cursor:pointer;display:flex;flex-direction:column;font-family:IBM Plex Sans,sans-serif;font-size:16px;line-height:1.5;opacity:0;padding:8px 12px 0 8px;pointer-events:none;transition:all .2s ease-in-out;will-change:opacity,background-color}.Tally__badgeTally___AkCwi{border-radius:8px 0 0 0;padding-bottom:8px}.Tally__horizontal___TYyqc{flex-direction:row;height:100%;padding:0 8px}.Tally__show___EesAt{opacity:1;pointer-events:auto}.Tally__tally___wF-n7:hover{background-color:#f4f4f4}.Tally__logo___k79zv{display:block;margin-bottom:8px;max-width:4em;width:4em}.Tally__logoSmall___JZuyy{max-width:3em;padding-left:4px;width:3em}.Tally__small___lrym1{padding:0 4px}.Tally__forceCollapse___4k5aa{display:none}.HideableTally__tally___TXiqB *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.HideableTally__tally___TXiqB{background-color:#fff;color:#0e1d1a;cursor:pointer;display:flex;flex-direction:column;font-family:IBM Plex Sans,sans-serif;font-size:16px;line-height:1.5;transition:all .2s ease-in-out;will-change:opacity,background-color}.HideableTally__tally___TXiqB:hover{background-color:#f4f4f4}.HideableTally__hideContainer___w5Wlj{align-items:center;color:#82807d;display:flex;font-size:12px;padding-left:8px;z-index:1}.HideableTally__logoSingleLetter___OwmJA{max-width:1em;width:1em}.HideableTally__logoContainer___kXnxF{align-items:center;display:flex;padding-right:8px}.HideableTally__openingArrow___yBpbp{color:#82807d;font-size:16px;font-weight:600;margin-right:4px}.HideableTally__closingArrow___pKIyO{color:#82807d;display:block;font-size:16px;font-weight:600;max-width:1em;width:1em}.SectionIcon__sectionIcon___nqPTw{speak:none;display:inline-block!important;font-style:normal!important;font-variant:normal!important;font-weight:400!important;line-height:1.5!important;margin-right:5px!important}.SectionIcon__sectionIcon___nqPTw:before{border-radius:4px;color:#fff;display:inline-block!important;padding:2px 4px;text-align:center;transform:scale(1);width:12px}.SectionIcon__introduction___uhUFG:before{background:#002ab2;content:"I"}.SectionIcon__methods___RVooU:before{background:#0036e5;content:"M"}.SectionIcon__results___1k9LI:before{background:#0062ff;content:"R"}.SectionIcon__discussion___Qeyb0:before{background:#66a3ff;content:"D"}.SectionIcon__other___uF\+vV:before{background:#9ec4f0;content:"O"}.SectionIcon__smallSectionIcon___nCjHN{line-height:1!important}.SectionTally__sectionTallyWidget___aaCj5 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.SectionTally__sectionTallyWidget___aaCj5{padding:8px}.SectionTally__sectionTallyWidget___aaCj5:hover{background-color:#f4f4f4!important}.SectionTally__sectionTallyWrapper___nwj2j{align-items:center;display:flex}.SectionTally__tally___es9p7{color:#0e1d1a;cursor:pointer;display:flex;flex-direction:column;font-family:IBM Plex Sans,sans-serif;font-size:16px;line-height:1.5;opacity:0;padding-bottom:0;padding-right:12px;pointer-events:none;transition:all .2s ease-in-out;will-change:opacity,background-color}.SectionTally__badgeTally___ZYqar{border-radius:8px 0 0 0;padding-bottom:8px}.SectionTally__horizontal___-hgL\+{flex-direction:row;height:100%;padding:0 8px}.SectionTally__show___wciqp{opacity:1;pointer-events:auto}.SectionTally__logo___pEojg{display:block;margin-bottom:8px;max-width:4em;width:4em}.SectionTally__logoSmall___yzxV\+{max-width:3em;padding-left:4px;width:3em}.SectionTally__small___QBk26{padding:0 4px}.SectionTally__forceCollapse___MexwG{display:none}.SectionTally__chartSubheading___tm7gz{font-family:IBM Plex Sans,sans-serif;font-size:12px;margin-top:4px;text-align:center;width:140px}.SectionTally__chartLabel___Nm4F\+{display:block;font-weight:600}</style><style>.scite-badge {
+    display: inline-block;
+}
+
+.scite-badge .scite-tally {
+    border-radius: 8px;
+    border: 1px solid #cfcfcf;
+    min-height: 120px;
+
+    box-sizing: border-box;
+}
+
+.scite-badge[data-show-labels='true'] .scite-tally {
+}
+
+.scite-badge[data-layout='horizontal'] .scite-tally {
+    min-height: 0px;
+    max-height: 32px;
+}
+
+.scite-badge:not([data-chart-type]) .scite-section-tally {
+    border-radius: 8px;
+    height: min-content;
+    width: min-content;
+    padding: 8px 0px 0px 8px;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+}
+
+.scite-badge[data-section-tally-layout='horizontal'] .scite-section-tally {
+    padding: 0px;
+}
+</style><link rel="stylesheet" href="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/badge.css"><script type="text/javascript" async="" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="journal article" style="padding-left: 0px; padding-right: 0px;"><div id="MathJax_Message" style="display: none;"></div>
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="https://www.scielo.br/">
+        <strong>Brazil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="https://www.scielo.br/journals/alpha?status=current" class="tab_link">
+              Journal list by title
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/journals/thematic?status=current" class="tab_link">
+              Journal list by subject area
+            </a>
+          </li>
+          <li>
+            <a href="https://search.scielo.org/?q=*&amp;lang=en&amp;filter[in][]=scl">
+              Search
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Metrics
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              About: Brazil
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              Contacts
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.scielo.org/">
+        <strong>SciELO.org - The SciELO Network</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/">
+            National and thematic collections
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-alphabetical-order/">
+              Journal list by title
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-subject-area/">
+              Journal list by subject
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://search.scielo.org/">
+            Search
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org/">
+            Metrics
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/access-via-oai-and-rss/">
+              OAI and RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/">
+              About the SciELO Network
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/contact/">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="https://blog.scielo.org/en/">
+      
+          <strong>Blog SciELO in Perspective</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs" style="top: 0px;">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Open menu">Open menu</a>
+      
+      <h2 class="logo-svg-mini">
+        <a href="https://www.scielo.br/" title="Go to the home page of the collection:Brazil" style="background:url(https://www.scielo.br/media/files/logo_25.svg); background-position: 0px; background-repeat: no-repeat;">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brazil</strong></span>
+        </a>
+      </h2>    
+      
+      
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg" style="background:url(https://www.scielo.br/media/files/logo_25.svg); background-position: 0px; background-repeat: no-repeat;"></div>
+            
+          </div>
+          <nav>
+            <ul>
+    <li>
+      <a href="https://www.scielo.br/">
+        <strong>Brazil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="https://www.scielo.br/journals/alpha?status=current" class="tab_link">
+              Journal list by title
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/journals/thematic?status=current" class="tab_link">
+              Journal list by subject area
+            </a>
+          </li>
+          <li>
+            <a href="https://search.scielo.org/?q=*&amp;lang=en&amp;filter[in][]=scl">
+              Search
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Metrics
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              About: Brazil
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              Contacts
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.scielo.org/">
+        <strong>SciELO.org - The SciELO Network</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/">
+            National and thematic collections
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-alphabetical-order/">
+              Journal list by title
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-subject-area/">
+              Journal list by subject
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://search.scielo.org/">
+            Search
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org/">
+            Metrics
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/access-via-oai-and-rss/">
+              OAI and RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/">
+              About the SciELO Network
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/contact/">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="https://blog.scielo.org/en/">
+      
+          <strong>Blog SciELO in Perspective</strong>
+        </a>
+    </li>
+  </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Journal of the Brazilian Society of Mechanical Sciences and Engineering </span><span class="sci-ico-arrowDown"></span></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="https://www.scielo.br/j/jbsmse/">
+                  
+                    <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/jbsmse_glogo.gif" class="image" alt="Logomarca do periódico: Journal of the Brazilian Society of Mechanical Sciences and Engineering">
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                <li>
+                  <a href="https://www.scielo.br/journal/jbsmse/about/#about">
+                    <span class="glyphBtn about"></span> About the journal
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.scielo.br/journal/jbsmse/about/#editors">
+                    <span class="glyphBtn editorial"></span> Editorial Board
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.scielo.br/journal/jbsmse/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instructions to authors
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.scielo.br/journal/jbsmse/about/#contact">
+                    <span class="glyphBtn contact"></span> Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+
+
+  <a href="https://www.scielo.br/set_locale/pt_BR/" class="lang-pt" lang="pt-BR">Português</a>
+  <a href="https://www.scielo.br/set_locale/es/" class="lang-es" lang="es">Español</a>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Open menu">  Open menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg" style="background:url(https://www.scielo.br/media/files/logo_25.svg);background-repeat: no-repeat;"></div>
+            
+          </div>
+          <nav>
+            <ul>
+    <li>
+      <a href="https://www.scielo.br/">
+        <strong>Brazil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="https://www.scielo.br/journals/alpha?status=current" class="tab_link">
+              Journal list by title
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/journals/thematic?status=current" class="tab_link">
+              Journal list by subject area
+            </a>
+          </li>
+          <li>
+            <a href="https://search.scielo.org/?q=*&amp;lang=en&amp;filter[in][]=scl">
+              Search
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Metrics
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              About: Brazil
+            </a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/about/">
+              Contacts
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.scielo.org/">
+        <strong>SciELO.org - The SciELO Network</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/">
+            National and thematic collections
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-alphabetical-order/">
+              Journal list by title
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/journals/list-by-subject-area/">
+              Journal list by subject
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://search.scielo.org/">
+            Search
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org/">
+            Metrics
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/access-via-oai-and-rss/">
+              OAI and RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/">
+              About the SciELO Network
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.scielo.org/en/about-scielo/contact/">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="https://blog.scielo.org/en/">
+      
+          <strong>Blog SciELO in Perspective</strong>
+        </a>
+    </li>
+  </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="https://www.scielo.br/" title="Go to the home page of the collection:Brazil" style="background:url(https://www.scielo.br/media/files/logo_25.svg); background-repeat:no-repeat;background-position:0px;">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brazil</strong></span>
+          </a>
+        </h2>         
+        
+        
+
+      </div>
+      <div class="col-xs-4 language">
+        
+
+
+  <a href="https://www.scielo.br/set_locale/pt_BR/" class="lang-pt" lang="pt-BR">Português</a>
+  <a href="https://www.scielo.br/set_locale/es/" class="lang-es" lang="es">Español</a>
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Journal of the Brazilian Society of Mechanical Sciences and Engineering </span><span class="sci-ico-arrowDown"></span></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="https://www.scielo.br/j/jbsmse/">
+                    
+                      <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/jbsmse_glogo.gif" class="image" alt="Logomarca do periódico: Journal of the Brazilian Society of Mechanical Sciences and Engineering">
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                    <li>
+                      <a href="https://www.scielo.br/journal/jbsmse/about/#about">
+                        <span class="glyphBtn about"></span> About the journal
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.scielo.br/journal/jbsmse/about/#editors">
+                        <span class="glyphBtn editorial"></span> Editorial Board
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.scielo.br/journal/jbsmse/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instructions to authors
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.scielo.br/journal/jbsmse/about/#contact">
+                        <span class="glyphBtn contact"></span> Contact
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/jbsmse/">
+          
+            <img src="/media/images/jbsmse_glogo.gif" class="image" alt="Logomarca do periódico: Journal of the Brazilian Society of Mechanical Sciences and Engineering" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="https://www.scielo.br/j/jbsmse/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="https://www.scielo.br/j/jbsmse/i/2011.v33n4/" class="btn group">
+                table of contents
+            </a>
+
+            
+              
+                <a href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">« previous</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                current
+            </a>
+
+            
+            <a href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">next »</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Text
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Text
+                
+                  (English)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target="_blank" href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (English)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Share</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Share
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="https://www.scielo.br/j/jbsmse/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="https://www.scielo.br/j/jbsmse/i/2011.v33n4/" class="btn no-ico-util">
+              Table of contents
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Share
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Text
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Text
+                
+                  (English)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target="_blank" href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (English)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1678-58782011000400010 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Technical Papers</span><span class="_separator"> • </span><span class="_editionMeta">J. Braz. Soc. Mech. Sci. &amp; Eng. 33 
+                (4)
+            <span class="_separator"> • </span>Dec&nbsp;2011</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1678-58782011000400010" class="_doi" target="_blank">https://doi.org/10.1590/S1678-58782011000400010</a>
+        &nbsp;
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1678-58782011000400010"><span class="sci-ico-link"></span>copy</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Some issues in real-time systems verification using time Petri Nets<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<div class="articleMeta"></div>
+<div class="contribGroup" style="opacity: 1;">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Pedro M. González del Foyo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,&nbsp; Recife,&nbsp; 
+          ,&nbsp; Pernambuco,&nbsp; 
+        ,&nbsp; Universidade Federal de Pernambuco,&nbsp; Dept. of 
+Mechanical Engineering ,&nbsp; Brazil,&nbsp; pedro.foyo@ufpe.br</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> José Reinaldo Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,&nbsp; São Paulo,&nbsp; 
+          ,&nbsp; São Paulo,&nbsp; 
+        ,&nbsp; Universidade de São Paulo,&nbsp; Dept. of Mechatronics 
+and Mechanical Systems ,&nbsp; Brazil,&nbsp; reinaldo@usp.br</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">About the authors</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu" style="width: 190px;"><li class="selected">	<a href="#articleSection0">Abstract</a></li><li class="">	<a href="#articleSection1">Text</a></li><li class="">	<a href="#articleSection2">Publication Dates</a></li><li class="">	<a href="#articleSection3">History</a></li></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Abstract"><a name="articleSection0"></a><h1 class="articleSectionTitle">Abstract</h1></div>
+<div>
+<p>Time Petri Net (TPN) models have been widely used to the 
+specification and verification of real-time systems. However, the claim 
+that most of these techniques are useful for real-time system 
+verification can be discussed, based on two assumptions: i) to be 
+suitable for real-time systems verification, a technique must be able to
+ check timing properties, both safe and behavioral, and ii) the 
+underlying algorithm must be efficient enough to be applied to complex 
+systems design. In this paper we will discuss the suitability of 
+commonly accepted verification techniques that use model-checking as a 
+verification framework and TPN as a description model. We present a new 
+algorithmic approach that allows computation of end-to-end time between 
+activities over an abstract state space model. The proposed approach 
+needs to compute the abstract state space only once improving the 
+efficiency of the verification process and turning it suitable for large
+ problems. We also introduce a new sufficient condition for abstract 
+states space to preserve the branching time properties that yields more 
+compact graphs than the condition already used in actual approaches. The
+ approach would fit a design environment also based on Petri Nets called
+ GHENeSys (General Hierarchical Enhanced Petri Nets). The results 
+obtained, using our verification approach are compared with similar 
+available approaches.</p>
+<p>formal verification; Time Petri Nets; real-time systems; abstract state space</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text"><a name="articleSection1"></a>
+<p></p>
+<p>TECHNICAL PAPERS </p>
+<p></p>
+<p> MECHATRONICS AND ROBOTICS </p>
+<p></p>
+<p>
+      <b>Some issues in real-time systems verification using time Petri Nets</b>
+    </p>
+<p></p>
+<p>
+      <b>Pedro M. González del Foyo<sup>I</sup>; José Reinaldo Silva<sup>II</sup></b>
+    </p>
+<p></p>
+<p><sup>I</sup>Universidade Federal de Pernambuco Dept. of Mechanical Engineering 50670-420 Recife, PE, Brazil, <a href="mailto:pedro.foyo@ufpe.br">pedro.foyo@ufpe.br</a></p>
+<p></p>
+<p><sup>II</sup>Universidade de São Paulo Dept. of Mechatronics and Mechanical Systems 05508-900 São Paulo, SP, Brazil, <a href="mailto:reinaldo@usp.br">reinaldo@usp.br</a></p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>Time Petri Net (TPN) models have been widely used to the 
+specification and verification of real-time systems. However, the claim 
+that most of these techniques are useful for real-time system 
+verification can be discussed, based on two assumptions: i) to be 
+suitable for real-time systems verification, a technique must be able to
+ check timing properties, both safe and behavioral, and ii) the 
+underlying algorithm must be efficient enough to be applied to complex 
+systems design. In this paper we will discuss the suitability of 
+commonly accepted verification techniques that use model-checking as a 
+verification framework and TPN as a description model. We present a new 
+algorithmic approach that allows computation of end-to-end time between 
+activities over an abstract state space model. The proposed approach 
+needs to compute the abstract state space only once improving the 
+efficiency of the verification process and turning it suitable for large
+ problems. We also introduce a new sufficient condition for abstract 
+states space to preserve the branching time properties that yields more 
+compact graphs than the condition already used in actual approaches. The
+ approach would fit a design environment also based on Petri Nets called
+ GHENeSys (General Hierarchical Enhanced Petri Nets). The results 
+obtained, using our verification approach are compared with similar 
+available approaches.</p>
+<p></p>
+<p><b>Keywords:</b> formal verification, Time Petri Nets, real-time systems, abstract state space</p>
+<p></p>
+<p>
+      <b>Introduction</b>
+    </p>
+<p></p>
+<p>In real-time systems the correctness depends on the output and also 
+on the time in which this output is produced. Therefore, the 
+verification of such systems requires the determination of quantitative 
+temporal properties, besides qualitative properties associated with its 
+logical correctness.</p>
+<p></p>
+<p>As stated in Wang, Deng and Wu (2000), a key requirement to verify 
+real time systems is the end-to-end delay for task execution and the 
+correct execution sequences for those tasks. Execution sequences are 
+related to the logical correctness of the system while end-to-end delays
+ allow the evaluation of quantitative temporal properties for the 
+sequences generated.</p>
+<p></p>
+<p>Despite several achievements in formal verification for real-time 
+systems, the intrinsic complexity of various framework environments 
+dedicated to its verification remains forbiddingly high (Wang, 2004).</p>
+<p></p>
+<p>Usually, the verification problem of timed systems is exponentially 
+more complex than their untimed counterpart (Wang, 2004). Consequently, 
+formal verification techniques are not yet commonly used in real-time 
+systems design. Since the work of Clarke and Emerson (1981), the 
+automatic verification of systems has improved, especially in what 
+concerns time constrained systems (Alur, Courcoubetis and Dill, 1993; 
+Henzinger et al., 1992; Emerson Jutla and Sistla, 1993), based on the 
+Timed Automata (TA) formalism (Alur and Dill, 1990).</p>
+<p></p>
+<p>Recently, techniques based on reachability analysis for TPNs have 
+been developed  most of them based on the state class approach 
+(Berthomieu and Menasche, 1983)  and inserted on several (time) 
+extended Petri nets environments. Some of them are suitable to do 
+performance evaluations, since the time is represented as a fixed delay 
+or time durations (Ramchandani, 1974; Sifakis, 1980; Zuberek, 1980). 
+However, those Petri nets models are not well suited to deal with 
+real-time systems where the time duration of activities (or tasks) could
+ not be predicted.</p>
+<p></p>
+<p>Other extended models (Aalst, 1993; Merlin and Faber, 1976; Ghezzi et
+ al., 1991; Tsai, Yang and Chang, 1995; Cortes, Eles and Peng, 2003) are
+ suitable to deal with real-time systems because of their ability to 
+represent varying time durations of activities, by using timing 
+intervals attached to transitions. Merlin's Time Petri Nets (TPN) belong
+ to that class of system, and is the most widely used formalism for 
+specification, analysis and verification of real-time systems 
+(Berthomieu and Diaz, 1991; Yoneda and Ryuba, 1998; Virbitskaite and 
+Pokozy, 1999; Lime and Roux, 2006; Hadjidj and Boucheneb, 2008; Yovine, 
+1996).</p>
+<p></p>
+<p>However, not all approaches using TPN's deal with the explicit 
+determination of quantitative temporal properties  a critical issue in 
+real-time systems design. In all classical TPN approach it is necessary 
+to verify whether a property can actually be checked, despite the 
+possibility to determine quantitative temporal properties. For instance,
+ even in methods based on linear time, only safety properties could be 
+verified, which is not interesting to real-time system design. Thus, 
+Timed Computational Tree Logic (TCTL) proposed in Alur, Courcoubetis and
+ Dill (1993) is the most used temporal logic for real-time systems 
+(Wang, 2004). The efficiency of the verification process is also a key 
+issue. For instance, the complexity of a TCTL model-checking algorithm 
+(Alur, Courcoubetis and Dill, 1993) over Timed Automata  using the 
+region graph approach  is PSPACE<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         PSPACE problems may incur memory consumption polynomials to the input sizes in bit counts. 
+      </span></span></span>.</p>
+<p></p>
+<p>Virbitskaite and Pokozy (1999) implemented a model-checking algorithm
+ for TCTL using TPN as the description formalism, based on the region 
+graphs, just as in Alur, Courcoubetis and Dill (1993). The quantitative 
+part of the algorithm is performed by adding a special transition 
+associated with the time in the TCTL formula. Therefore, there would be 
+an extra transition per formula to be checked. Even when a partial order
+ reduction method is used to decrease the state-space size the 
+complexity remains PSPACE.</p>
+<p></p>
+<p>The verification process will be discussed in the next section, using
+ the concept of complexity presented in Alur, Courcoubetis and Dill 
+(1993) as reference. In the next section it will be presented some 
+commonly accepted techniques that use model-checking as a verification 
+framework and TPN as description model to real-time system verification.
+ Advantages and disadvantages of each approach will be presented in the 
+following section where our proposal will be presented to construct an 
+abstract state space to improve the verification process. Finally, in 
+the last section some experimental results will be shown.</p>
+<p></p>
+<p>
+      <b>The Verification Process</b>
+    </p>
+<p></p>
+<p>Let us assume that TPN is fixed as the description model for the 
+design of real-time systems. Also, it is assumed that the specification 
+of desired properties for a given system modeled in TPN is also clearly 
+stated using some temporal logic (see section II in Wang (2004) for a 
+survey).</p>
+<p></p>
+<p>In order to verify the given specification, a state-space for the TPN
+ model must be first computed and represented (see section V in (Wang, 
+2004) for a survey in state-space representations). Next, a labeling 
+algorithm should go over the state space, labeling the nodes with their 
+holding sub-formulas, respectively, until the entire formula is mapped. 
+The model-checker should answer <i>yes </i>only if the formula holds in at least one node (global) or in a specific node (local), and <i>no </i>otherwise. The complexity of the labeling algorithm is linear in the size of the graph that represents the system state-space.</p>
+<p></p>
+<p>
+      <b>Basic Definitions</b>
+    </p>
+<p></p>
+<p>Merlin's Time Petri Nets extend classical Petri Nets by inserting 
+temporal intervals associated with transitions, which specify firing 
+delay ranges for these transitions to fire. A formal definition for TPN 
+nets is revisited in this section, including the notion of state and 
+state class.</p>
+<p></p>
+<p>A Time Petri Net is a tuple (P, T, B, F, M<sub>0</sub>, SIM) where:</p>
+<div><blockquote>
+      <p> P is a finite non-empty set of places p<sub>i</sub>;</p>
+      <p> T is a finite non-empty set of transitions t<sub>i</sub>;</p>
+      <p> B is the backward incidence function</p>
+      <div><blockquote>
+        <p>B: P × T → N;</p>
+      </blockquote></div>
+      <p> F is the forward incidence function</p>
+      <div><blockquote>
+        <p>F: T × P → N;</p>
+      </blockquote></div>
+      <p> M0 is the initial marking function</p>
+      <div><blockquote>
+        <p>M0: P → N;</p>
+      </blockquote></div>
+      <p> SIM is a mapping called static interval</p>
+      <div><blockquote>
+        <p>SIM : T → Q<sup>+ </sup>× (Q<sup>+ </sup>∪{∞});</p>
+      </blockquote></div>
+    </blockquote></div>
+<p></p>
+<p>where N is the set of non-negative integers and Q<sup>+ </sup>is the set of positive rational numbers.</p>
+<p></p>
+<p>The static interval is composed of two positive rational numbers 
+(EFT, LFT), where EFT represents the earlier firing time and LFT the 
+latest firing time. Therefore, if a transition <i>t </i>becomes enabled at time τ, then <i>t </i>cannot be fired before (τ + EFT(t)) and no later than (τ+LFT(t)), unless it is disabled by the firing of another transition. </p>
+<p></p>
+<p>In TPN, the enabling condition of a transition is similar to the one 
+in classic Petri Nets. Therefore, the "enabling condition" for a generic
+ transition <i>t<sub>i</sub></i>will be:</p>
+<p></p>
+<p>
+      </p><div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/150db27324af089b625c948800f191db5b37d13d.jpg">
+      </div></div>
+</div>
+    <p></p>
+<p></p>
+<p>The set of all transitions enabled by marking M will be denoted as <i>enb(M)</i>.
+ It is an important issue to determine the transitions that were just 
+enabled by the transition M (to start counting its enabling time). If 
+marking M is preceded by a generic marking M", that is, if <img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/f4bbee440f3083e47c01145b81338d8abb78d011.jpg">, the persistent transitions in M are defined as <i>pers(M)={t</i>|<i>t</i>∈<i>(enb(M')</i>∩ <i>enb(M)}</i>, and the new enabled transitions as <i>new(M) </i>= <i>enb(M)\pers(M)</i>. It is clear that <i>new(M) </i>⊆ <i>enb(M)</i>.</p>
+<p></p>
+<p>Even when marking M enables a set of transitions, not all of them may
+ be allowed to fire, due to the firing constraints of transitions (EFT's
+ and LFT's). Thus, the "firing condition" depends on two conditions:</p>
+<p></p>
+<p>1) transitions must be enabled, as formally expressed by Eq. (1); </p>
+<p></p>
+<p> 2) enabled transitions must not fire before its EFT; they must fire 
+before or exactly at its LFT unless another conflicting transition fires
+ before.</p>
+<p></p>
+<p>According to the second condition, a transition <i>t<sub>i</sub></i>, enabled by a marking M at absolute time τ, could be fired at the firing time θ iff θ is not smaller than the EFT of <i>t<sub>i</sub></i>and not greater than the smallest of the LFT's of all the transitions enabled by marking M, that is:</p>
+<p></p>
+<p>
+      </p><div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/35a54d189f8dcb691651304434869a516cf6b2a6.jpg">
+      </div></div>
+</div>
+    <p></p>
+<p></p>
+<p>A concrete state of the system can be defined as a pair s = (M, V) where:</p>
+<div><blockquote>
+      <p>1. M is a marking,</p>
+      <p>2. V is a clock valuation function, V: <i>enb(M) </i>→ R<sup>+</sup>.</p>
+    </blockquote></div>
+<p></p>
+<p>An abstract state of the system can be defined as a pair S = (M; I) where:</p>
+<div><blockquote>
+      <p> M is a marking,</p>
+      <p> I is an interval set which is a vector of possible firing 
+times. The size of this vector is given by the number of transitions 
+enabled by marking M, which is │<i>enb(M)</i>│.</p>
+    </blockquote></div>
+<p></p>
+<p>Abstract states represent a set of concrete states of the TPN model. 
+The firing interval set is also known as the firing domain D.</p>
+<p></p>
+<p>The firing of transition <i>t<sub>i</sub></i>leads the system to another state, at time τ + θ, which will be denoted as:</p>
+<p></p>
+<p>
+      </p><div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/7c38f538f0f825c291fb7e107cee8e19030cb91b.jpg">
+      </div></div>
+</div>
+    <p></p>
+<p></p>
+<p>ϒ(s) denotes the set of all firing transitions in state <i>s</i>, and ϒ(s) ⊆ enb(M).</p>
+<p></p>
+<p>The firing rule is the base to the computation of new states and to 
+establishment of a reachability relation among them. The set of all 
+states that are reachable from an initial state, or the set of firing 
+schedules feasible from an initial state, characterize the behavior of 
+the TPN. Similarly, the set of all reachable markings characterize the 
+behavior of a Petri Net.</p>
+<p></p>
+<p>Let ω be a path in a TPN model ℵ.</p>
+<p></p>
+<p>
+      </p><div class="row fig" id="154cb29a4d01099041c413ef6d26c2efc407e8b9">
+<a name="154cb29a4d01099041c413ef6d26c2efc407e8b9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg154cb29a4d01099041c413ef6d26c2efc407e8b9"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/154cb29a4d01099041c413ef6d26c2efc407e8b9.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>where the reachable state after <i>i </i>firings is ω<sup>i </sup>= si.</p>
+<p></p>
+<p>For a concrete state s = (M<sub>s</sub>, θ) and a state class C = (M, D), s ∈ C if exists an execution path ω such that:</p>
+<div><blockquote>
+      <p> s = ω<sup>n</sup></p>
+      <p> M<sub>s</sub> = M</p>
+      <p> θ<sub>n</sub> is consistent with D.</p>
+    </blockquote></div>
+<p></p>
+<p>
+      <b>State Space Computation Issues for TPN</b>
+    </p>
+<p></p>
+<p>For real-time systems, dense time model (where time is considered in the domain R<sup>+</sup>)
+ is the unique feasible option, what brings to the problem of treating 
+an infinite number of states. Two approaches are entitled to treat this 
+state space: region graphs (Alur, Courcoubetis and Dill, 1993) and the 
+state class approach (Berthomieu and Menasche, 1983).</p>
+<p></p>
+<p>As always, the objective of these representations is to yield a 
+state-space partition that groups concrete states into sets of states 
+with similar behavior respect to the properties been verified. That 
+"sets of states" must cover the entire state space and must be finite in
+ order to ensure the termination of the verification process.</p>
+<p></p>
+<p>Yovine (1996) and del Foyo and Silva (2008) show that a statespace 
+partition created using the state class approach is more efficient than 
+one created using region graphs. Also, state-space computation algorithm
+ remains PSPACE.</p>
+<p></p>
+<p>Concerning the state-space partition, two proposals are considered in
+ this work: one based on geometric regions (Yoneda and Ryuba, 1998) and a
+ "traditional" method (Berthomieu and Diaz, 1991). Other partition 
+methods are just derived from these basic approaches (Wang, Deng and Wu,
+ 2000; Hadjidj and Boucheneb, 2008).</p>
+<p></p>
+<p>State classes are commonly represented by two elements: a marking and
+ a time domain. When geometric region is used, the firing sequence is 
+also included instead of a single marking. This information is necessary
+ to construct the state class graphs for the Computational Tree Logic 
+(CTL) model checking.</p>
+<p></p>
+<p>However, each one of the basic partition methods would result in 
+distinct state-space partitions. For instance, using geometric regions 
+all time variables are referred to a global clock, while in the 
+traditional method all time variables are referred to a local clock, 
+initialized when the transitions are newly enabled. This difference 
+leads to different state representations.</p>
+<p></p>
+<p>The representation of a state class in geometric regions is given by a tuple <i>s = {</i><i>µ</i>, <i>I</i>, <i>σ</i><i>}</i> where <i>µ</i> represents the state marking, <i>I </i>is a vector containing the time values on which all transitions where fired (until the state <i>s </i>is reached) referred to a global clock, and σ is the sequence of transitions fired to reach the target state <i>s</i>. Comparatively, in the traditional approach, a state class is a pair <i>s</i> = <i>{</i><i>µ</i><i>, I}</i> where <i>µ</i> represents the marking and <i>I </i>is a vector containing the time values for all transitions enabled in <i>s </i>referred to the time in which those transitions become enabled.</p>
+<p></p>
+<p>On both methods, a state class stands for a "set of states" that 
+shares the same marking and time boundaries. Thus, an abstract state 
+space of a TPN model is a contraction of its generally infinite concrete
+ state space Σ. In this paper the definition of abstract state space 
+follows the one stated in Hadjidj and Boucheneb (2008).</p>
+<p></p>
+<p><b>Definition 1</b> (<i>Abstract state space</i>): An abstract state space of a TPN model is defined as a state transition system (Ω, →, C0) where:</p>
+<div><blockquote>
+      <p> Ω is a set of elements, called abstract states, representing a
+ cover of Σ. Each abstract state is a nonempty set of states having the 
+same marking,</p>
+      <p> C<sub>0</sub>∈ Ω is the initial abstract state such that <i>s<sub>0</sub></i>∈ C<sub>0</sub>,</p>
+      <p> → ⊆ (C × T × C) is the successor relation satisfying condition EE<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         Conditions EE, AE and EA named after its transition state 
+relations: Exists-Exists, All-Exists and Exists-All respectively. 
+      </span></span></span>= SG ∧ EEr, where:</p>
+    </blockquote></div>
+<p></p>
+<p>
+      </p><div class="row fig" id="6129c1d82de97c950c48ba95a6b72147d7e6ff74">
+<a name="6129c1d82de97c950c48ba95a6b72147d7e6ff74"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg6129c1d82de97c950c48ba95a6b72147d7e6ff74"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/6129c1d82de97c950c48ba95a6b72147d7e6ff74.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>Relation → may also satisfy additional conditions as AE and EA:</p>
+<p></p>
+<p>
+      </p><div class="row fig" id="c65ea408a96e441faf66556c31863f4cbc0d7fed">
+<a name="c65ea408a96e441faf66556c31863f4cbc0d7fed"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc65ea408a96e441faf66556c31863f4cbc0d7fed"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/c65ea408a96e441faf66556c31863f4cbc0d7fed.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>The above definition establishes that all concrete states must be 
+included in at least one abstract state according to condition (SG). 
+However, even if well stated and successfully used, abstract state 
+spaces do not ensure correctness for quantitative temporal properties 
+determination.</p>
+<p></p>
+<p>As stated before, the end-to-end time between task executions is a 
+key requirement in real-time systems verification. Since state 
+transitions represent the completion of some task, the end-to-end time 
+can be computed as the time elapsed between states in a sequence of 
+state transitions, called execution path. Those computations are correct
+ if all execution paths in the concrete state space have a matching 
+execution path in the abstract state space and vice-versa, and the time 
+boundaries in each time domain contain precisely the temporal behavior 
+of the concrete states belonging to its state class.</p>
+<p></p>
+<p>In the following section, most commonly used abstract state spaces in verification approaches will be introduced. </p>
+<p></p>
+<p>
+      <b>Some Verification Approaches Based on Abstract State Spaces</b>
+    </p>
+<p></p>
+<p>Berthomieu and Diaz (1991) proposed an enumerative technique based on
+ a State Class Graph (SCG) and directed to the determination of some TPN
+ properties like reachability and boundness. They also showed the 
+undecidability of those properties, giving some sufficient conditions 
+for the boundness property. The SCG preserves only the linear time 
+properties.</p>
+<p></p>
+<p>Yoneda and Ryuba (1998) proposed a sufficient condition under which 
+the abstract state spaces could preserve branching time properties. 
+According to them abstract state spaces preserve the branching time 
+properties if the (AE) property holds. Such property was called <i>atomicity</i>, and State Class Graphs satisfying this property were called Atomic Geometric Region Graph (AGRG).</p>
+<p></p>
+<p>The ASCG (Yoneda and Ryuba, 1998) was obtained using the geometric 
+regions and yields a graph that preserves the properties (EE), (EA) and 
+(AE). <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Figure 1</a> shows an example of a TPN taken from Yoneda and Ryuba (1998).</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Figure 2</a> shows the SCG and the AGRG obtained using Yoneda and Ryuba approach for the example in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>It should be noticed that approach proposed by Yoneda and Ryuba was 
+idealized only for CTL model-checking. Thus, the complexity of the 
+algorithm to compute the end-to-end time between transitions will be 
+forbiddingly high to be implemented. Since each state class contains as 
+much variables as the number of transitions fired to achieve it, the 
+size of the system of inequalities will increase exponentially turning 
+it into an intractable problem.</p>
+<p></p>
+<p>Berthomieu, Ribet and Vernadat (2004) implemented the state class 
+approach in a software tool called TINA. Using TINA, the SCG and ASCG of
+ a TPN can be obtained, but the property (EE) doesn't hold in the ASCG. 
+The ASCG is obtained from the Strong State Class Graph (SSCG), which is 
+similar to the SCG, but more suitable to be a starting point for the 
+refinement process.</p>
+<p></p>
+<p>In del Foyo and Silva (2008), an algorithm was proposed to compute 
+the end-to-end time between task executions using the ASCG obtained 
+using TINA. However, such technique only works for specific system 
+behaviors where the refinement technique does not affect the (EE) 
+property.</p>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Figure 3</a> shows the ASCG with minimum and maximum time increments attached to every transition.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Suppose, for instance, that it is necessary to check the TCTL formula EF<sub>&lt;4</sub> (p5 ∧ p7) over the graph in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>.
+ The existence of a path {s0, s2, s3, s6, s9, s10} will force the 
+verification algorithm to set the formula to true in state s0. However, 
+looking at the TPN we can easily note that this formula should be 
+evaluated to false, since there is no way transition t5 could fire 
+before 5 time units.</p>
+<p></p>
+<p>Clearly, property (EE) does not hold in that graph. Notice that we 
+can easily find an execution path accepted by the TPN model that is not 
+covered by the ASCG.</p>
+<p></p>
+<p>
+      </p><div class="row fig" id="d256f936ff6130ea9a953c4f91f3c0a6bbe39fab">
+<a name="d256f936ff6130ea9a953c4f91f3c0a6bbe39fab"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgd256f936ff6130ea9a953c4f91f3c0a6bbe39fab"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/d256f936ff6130ea9a953c4f91f3c0a6bbe39fab.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>The CS-class approach was proposed in Wang, Deng and Wu (2000) as a 
+modification of the traditional state class approach to allow the 
+computation of quantitative temporal properties.</p>
+<p></p>
+<p>A clock stamped state class (CS-class) is a tuple C = (M, D, ST) where:</p>
+<div><blockquote>
+      <p>1. M is a marking.</p>
+      <p>2. D is a firing domain, i.e., a set of constraints on the 
+values of the time to fire for transitions enabled by current marking M.</p>
+      <p>3. ST is the time stamp of the CS-class, which is a (global) time interval.</p>
+    </blockquote></div>
+<p></p>
+<p>By computing a CS-class reachability graph, it is possible to get a 
+partition of the state space with its respective valid global time 
+interval. If that graph was correctly computed, enough information would
+ be obtained to determine the validity of some temporal logic statements
+ including quantified temporal properties. Still, the CSclass only 
+preserves the linear time properties.</p>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Figure 4</a>
+ shows two graphs: the reachability tree (in the left) obtained using 
+the CS-class approach and the LTS (in the right) obtained by TINA, both 
+for the TPN example in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.</p>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Despite the fact that there are different semantics in timing 
+information (CS-class uses global time and LTS uses global time 
+increments), the same kind of property can be verified in both graphs, 
+even linear time properties, including quantitative temporal properties.</p>
+<p></p>
+<p>From the point of view of computational time, the choice of LTS time 
+increments is better than the reachability tree (it would be equal in 
+the worst case).</p>
+<p></p>
+<p>The LTS of the example shown in Wang, Deng and Wu (2000) is in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a>. In the example published in Wang, Deng and Wu (2000) the reachability tree has 14 nodes while there are 7 in the LTS.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>However, the LTS approach could lead to errors when evaluating 
+quantitative temporal properties (del Foyo and Silva, 2008). Even when 
+quantitative temporal properties can be checked, prospective results are
+ not really useful in real-time systems verifications, since the linear 
+time properties only allow the verification of safety properties.</p>
+<p></p>
+<p>Hadjidj and Boucheneb (2008) proposed a Concrete State Zone Graph 
+(CSZG), getting results from a different normalization technique 
+detached from the one used in Berthomieu and Vernadat (2003). The CSZG 
+is used as a starting point for a convex combination process that yields
+ a compact representation grouping state classes with the same marking 
+and time domains, similar to the union operation in convex zones.</p>
+<p></p>
+<p>The convex combination will contract the state-space representation, 
+but, at the same time, will introduce time solutions that do not appear 
+in the TPN model. Such operation could lead to errors in the 
+verification of quantitative temporal properties.</p>
+<p></p>
+<p>The refinement process to ensure the (AE) property yield a graph 
+called atomic-CSZG which can be used to verify CTL*. Such verification 
+is more efficient than the one in ASCG, according to experimental 
+results showed in (Hadjidj and Boucheneb, 2008)</p>
+<p></p>
+<p>Lime and Roux (2006) also used TPN to model system behavior. They 
+used the state class approach to build a Timed Automaton (TA) that 
+preserves the behavior of the TPN using as less clock variables as 
+possible. The resulting model is then verified using <b>UPPAAL</b> (Larsen, Petterson and Yi, 1997). However, even when <b>UPPAAL</b>
+ can answer about quantitative temporal properties, it can only verify a
+ subset of TCTL, what is a limitation in the system specification, 
+especially in the expressibility of behavioral properties. Another 
+drawback is the complexity of the algorithms: a PSPACE algorithm is 
+executed just to convert a TPN in a TA; then another PSPACE algorithm is
+ applied for each property to be checked.</p>
+<p></p>
+<p>The adding of a new transition to measure time elapsing was proposed 
+in Boucheneb, Gardey and Roux (2006) to perform TCTL model-checking in 
+TPN. Using that transition, TCTL formulas are translated into CTL 
+formulas. Then a zone-based graph for TPN is refined using a partition 
+refinement technique leading to a graph called Atomic Zone Based Graph 
+that preserves CTL properties. Finally, a fix point algorithm is used to
+ check the property. Such approach has PSPACE complexity for each 
+property to be checked.</p>
+<p></p>
+<p>The final conclusion is that none of the methods discussed above 
+improve significantly the approach in Virbitskaite and Pokozy (1999). 
+Thus, the low computational efficiency of these approaches, including 
+Virbitskaite and Pokozy (1999), or its limitation for systems 
+specification, are the main reasons why existing model-checkers are 
+barely used, even when most part of the academic community acknowledge 
+that the TCTL is the better choice for real-time systems specification.</p>
+<p></p>
+<p>Even with its limitations in specification, <b>UPPAAL</b> is a widely
+ used software tool for real-time systems verification, thanks to its 
+balance between performance and expressiveness.</p>
+<p></p>
+<p>
+      <b>A Proposal to Improve the Verification Process</b>
+    </p>
+<p></p>
+<p>From the discussion above it is possible to conclude that the main 
+problem in verification is the computational complexity. The 
+construction of the abstract state space is PSPACE, and the labeling 
+algorithm is PTIME, thus, there are few stages of the verification 
+process that can be improved in a significant way. On the other hand, 
+all mentioned approaches go through a process where the generation of 
+the abstract state space is a key step. Therefore, a natural proposal to
+ improve the verification process would be to compute the abstract state
+ space only once and check every property with PTIME<span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+         PTIME problems can be solved with time complexity polynomials to the input sizes in bit counts.
+      </span></span></span> complexity over this space.</p>
+<p></p>
+<p>First of all, the abstract state space must preserve branching time 
+properties in order to verify the TCTL. Next, the timing information 
+must be coded in a way that we can compute the minimum and maximum 
+elapsed time in every path of the graph. In the following section we 
+will show how to build a complete abstract state space as a general step
+ in the verification process.</p>
+<p></p>
+<p>
+      <b> The constrained state class graph</b>
+    </p>
+<p></p>
+<p>The main idea is to build an abstract state space that preserves CTL*
+ properties using a refinement procedure similar to the one used in 
+Yoneda and Ryuba (1998), but using a different sufficient condition to 
+preserve branching time properties.</p>
+<p></p>
+<p>To preserve the branching time properties, concrete states with 
+different future must be grouped in different state classes. This goal 
+can be achieved satisfying the (AE) property, but in this condition 
+concrete states with same future can be grouped apart, resulting an 
+excessive split process, and consequently increasing the number of state
+ classes. Naturally, bigger partitions imply in worse complexity results
+ for the labeling algorithm.</p>
+<p></p>
+<p>In this work we propose a new condition that is a necessary and 
+sufficient condition to abstract state spaces to preserve branching time
+ properties: the <i>stability condition</i>.</p>
+<p></p>
+<p><b>Definition 2</b> (<i>Stability</i>): A state class is <i>stable </i>if for any state <i>s </i>∈ C, ϒ(<i>s</i>)= ϒ(C). A state class graph G is stable, if every state class in G is stable.</p>
+<p></p>
+<p><b>Theorem 2</b> (<i>Branching time properties preservation</i>): An abstract state space preserves the branching time properties iff it is stable.</p>
+<p></p>
+<p>Proof: </p>
+<p></p>
+<p>(⇒) This follows from the definition of abstract state space (property EE) and from the definition of stability (Definition 2). </p>
+<p></p>
+<p> (⇐) Let G be an abstract state belonging to the abstract state space
+ Ω with at least one unstable state class C'. Let ω be a path in the 
+concrete state space ∑ passing through s', with s' ∈ C' (by EE).</p>
+<p></p>
+<p>Let s<sub>1</sub>,...,s<sub>i</sub> be successors of state s' after 
+firing different transitions. By property (EE) those states must be in 
+some successors of C', denoted C<sub>1</sub> ... C<sub>j</sub>. Once C' 
+is unstable, i ≠ j, and we can conclude that G do not satisfy (EE), or, 
+path ω doesn't have a match in G, which means that property (EE) fails 
+in G, which is a contradiction.</p>
+<p></p>
+<p>The proper constraints used here to split unstable state classes are 
+quite similar to those identified in Yoneda and Ryuba (1998) to split 
+non-atomic state classes. Different sets of state class firing 
+transition are related to the EFT and LFT: the new enabled and the 
+persistent enabled transitions.</p>
+<p></p>
+<p>The constraint for the unstable state class <i>s' </i>has the form:</p>
+<p></p>
+<p><i>s'  sk &lt; EFT(t')  LFT(t) </i>or <i>s'  sk &gt; LFT(t')  EFT(t) </i></p>
+<p></p>
+<p>where t, t' ∈ enb(M'), t ∈ new(M') and t' ∈ new(M<sub>k</sub>)</p>
+<p></p>
+<p>Since the constraint is a straight line in the state class domain of 
+(t', t), the splitting of the convex state class domain (time domains 
+must be convex since they are represented using Difference Bounded 
+Matrix (Dill, 1989)) will result in two convex time domains, one for 
+each resulting state class. The process must be applied to the new state
+ classes if they do not satisfy the stability condition.</p>
+<p></p>
+<p>Applying a constraint to an unstable state class does not increment 
+the number of variables in the time domain. Transitions involved in the 
+constraint are in the unstable time domain and, therefore, there is no 
+need to add any variable.</p>
+<p></p>
+<p>Since the CSZG (Algorithm 1 in Hadjidj and Boucheneb, 2008) satisfies
+ properties (EE) and (EA) by construction, it would be advisable to 
+start the process constructing the Constrained State Class Graph (CSCG).</p>
+<p></p>
+<p>Every time a new state class is computed (using Algorithm 1 in 
+Hadjidj and Boucheneb, 2008) the stability condition must be tested. If 
+the test fails, the state class must be split using an adequate time 
+constraint. This algorithm is repeated for the classes created in the 
+split process until the point where is not possible to generate a new 
+state class.</p>
+<p></p>
+<p>The proof that the CSCG is finite for bounded TPN is straightforward. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Figure 6</a> shows the CSCG for the TPN in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. Applying the stability condition over the atomicity condition yields graph with fewer states (see AGRG in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a>. and ASCG in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>).</p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>The abstract state space satisfies (EE), since the refinement process
+ does not add or eliminate any concrete state. Also, this abstract state
+ space is stable and consequently preserves the branching time 
+properties.</p>
+<p></p>
+<p>
+      <b>Computing minimum and maximum elapsed time over paths in CSCG</b>
+    </p>
+<p></p>
+<p>For the verification of quantitative temporal properties, the 
+abstract state space must allow the computation of a minimum and a 
+maximum elapsed time over any path. Using an algorithm similar to the 
+one in del Foyo and Silva (2008), global time increments can be 
+determined (See <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a>).</p>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 7</strong><br><br>
+</div>
+</div>
+<p></p>
+<p>Let ω be a valid execution path over an abstract state-space that preserves properties (EE) and (EA):</p>
+<p></p>
+<p>
+      </p><div class="row fig" id="b460fc6100880f6a0e19c709a590f3e9c5443e9c">
+<a name="b460fc6100880f6a0e19c709a590f3e9c5443e9c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgb460fc6100880f6a0e19c709a590f3e9c5443e9c"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/b460fc6100880f6a0e19c709a590f3e9c5443e9c.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>Then, </p>
+<p></p>
+<p>
+      </p><div class="row fig" id="da6a47bd3667dd0833febbaafc0f94e792d59f04">
+<a name="da6a47bd3667dd0833febbaafc0f94e792d59f04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgda6a47bd3667dd0833febbaafc0f94e792d59f04"><div class="thumbImg"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/da6a47bd3667dd0833febbaafc0f94e792d59f04.jpg"></div></a></div>
+</div>
+    <p></p>
+<p></p>
+<p>Therefore, we can use tmin(ω) and tmax(ω) to verify quantitative temporal properties.</p>
+<p></p>
+<p>For instance, let us check again the TCTL formula EF<sub>&lt;4</sub>(p5 ∋ p7), this time over the graph in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.
+ The TCTL formula does not hold in state C0 since starting in C0 and 
+ending in C7 takes at least 5 time units. However, the same formula also
+ does not hold in C1, what is wrong. Notice that by sure the minimum 
+time elapsed in some path is greater or equal to the time computed using
+ the time interval and the global time increments through the path. To 
+obtain exactly the minimum time elapsed in a path we need an abstract 
+state space that satisfies (EA) and (AE) at the same time, which is 
+difficult to obtain (and yields a large partition). We claim that the 
+approach used in CSCG can provide adequate results if is possible to 
+assure that most of the concrete states in a state class have successors
+ inside the respective state class successors. That condition holds in 
+the CSZG but was affected by the refinement process.</p>
+<p></p>
+<p>When a constraint is applied to split an unstable state class, the 
+relation of concrete states between the new state classes and its 
+predecessors is affected. Thus, the predecessor state class must be 
+split too. The described operation can be seen as restoring the (AE) 
+property in the Yoneda and Ryuba approach, which in fact it is less 
+restrictive, and yields better state space partitions.</p>
+<p></p>
+<p>We claim that an abstract state space satisfying those conditions can
+ be used to verify the TCTL without re-computing all state space for 
+every formula to be checked. Such achievement could lead to a 
+significant improvement in real time system verification.</p>
+<p></p>
+<p>
+      <b>Experimental Results</b>
+    </p>
+<p></p>
+<p>In this section we present a comparison of our approach with similar 
+approaches available in academic publications. The experiments were 
+conducted using the same models used in Yoneda and Ryuba (1998) and 
+showed in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga10fig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a>.</p>
+<p></p>
+<p>
+      </p><div class="row fig" id="a10fig08">
+<a name="a10fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiga10fig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    <p></p>
+<p></p>
+<p>Using the code developed by Yoneda and Ryuba we built the Atomic 
+Geometric Region Graph (AGRG). The tool TINA v2.9 was used to built the 
+Atomic State Class Graph (ASCG). An implementation of the algorithm 
+proposed in this work was used to build the Constrained State Class 
+Graph (CSCG).</p>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablea10tab01"><span class="sci-ico-fileTable"></span>Table 1</a>
+ reports the size (nodes and arcs) of the abstract state spaces obtained
+ for those TPN models using the tree approaches mentioned above and the 
+region graph representation (Alur, Dill, and Courcoubetis, 1993).</p>
+<p></p>
+<p>
+      </p><div class="row table" id="a10tab01">
+<a name="a10tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablea10tab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+        
+      <br>
+</div>
+</div>
+    <p></p>
+<p></p>
+<p>The result confirms that the CSCG yields better state space 
+partitions than the geometric region approach by Yoneda and Ryuba. 
+Taking into account the CPU time to obtain those partitions, the CSCG 
+achieves better performance even when Yoneda and Ryuba implementations 
+used C++ and our algorithm was implemented using Java.</p>
+<p></p>
+<p>Comparing with the ASCG, and taking in account that TINA is a 
+reference system in the area of real time verification  there is not a 
+prevalence of one approach over the other. Consistently, ASCG generates 
+fewer nodes, but CSCG generated fewer arcs in Net Examples 2 and 3 
+(about 50% and 30% less arcs, respectively). In the Net Example 2 TINA 
+performance is still better, but this situation is inverted in Net 
+Example 3. This is not a surprise, since the ASCG does not include all 
+paths in the TPN model; the CSCG can sometimes lead to better partitions
+ (like the one in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga10fig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a> (b)) than the ASCG, due to the stability condition.</p>
+<p></p>
+<p>However, in what concerns the compatibility with the overall design 
+process, to generate the whole state space and consider all possible 
+paths makes the analysis more secure, even if sometimes it compromises 
+the performance. Of course that it does not mean that TINA analysis is 
+not useful, but for real-time systems the ability to determine 
+quantitative temporal properties is critical and should be taken into 
+account to choose the verification approach. For this kind of systems 
+the proposal presented here should be more advisable.</p>
+<p></p>
+<p>
+      <b>Conclusion</b>
+    </p>
+<p></p>
+<p>The verification process is evolving since the work of Clark and 
+Emerson (1981), but still it does not appear an approach efficient 
+enough to verify quantitative temporal properties in branching time 
+temporal logics. Existing approaches were used for linear-time temporal 
+logic, but cannot be successfully applied to branching-time temporal 
+logic.</p>
+<p></p>
+<p>Current solutions to verify branching-time temporal logic include 
+only subsets of logic as in Larsen, Petterson and Yi (1997) and 
+Boucheneb, Gardey and Roux (2006). There are also solutions that use the
+ region graph approach (Alur, Courcoubetis and Dill, 1993; Virbitskaite 
+and Pokozy, 1999). The low efficiency of these methods, or limitations 
+in the specification method, are the reasons why existing model-checkers
+ are barely used, even if there is almost a consensus in the academic 
+community that the TCTL is the better choice for real-time system 
+specification.</p>
+<p></p>
+<p>In this work we showed that obtaining an abstract state space that 
+satisfies (EE)/(EA) properties and the stability condition will increase
+ the efficiency of the verification process without any restriction to 
+the specification power of the TCTL.</p>
+<p></p>
+<p>We also believe that such partition could be obtained taking the CSCG as a start point.</p>
+<p></p>
+<p>
+      <b>Acknowledgements</b>
+    </p>
+<p></p>
+<p>We thank CAPES for the partial support to the research that resulted in this article.</p>
+<p></p>
+<p>Paper received 13 August 2010. </p>
+<p></p>
+<p> Paper accepted 7 April 2011.</p>
+<p></p>
+<p><b>Technical Editor:</b> Glauco Caurin</p>
+<p></p>
+<p>
+      </p><li>
+        <span class="xref big">1</span>
+        <div> PSPACE problems may incur memory consumption polynomials to the input sizes in bit counts. </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> Conditions EE, AE and EA named after its transition state relations: Exists-Exists, All-Exists and Exists-All respectively. </div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div> PTIME problems can be solved with time complexity polynomials to the input sizes in bit counts.</div>
+      </li>
+    <p></p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>Aalst, W., 1993, "Interval Timed Coloured Petri Nets and their 
+Analysis", in: Application and Theory of Petri Nets 1993, M.A. Marsan, 
+Ed., Vol. 691. Springer-Verlag, Berlin, pp. 453-472.</div></li>
+<li><div>Alur, R., Courcoubetis, C. and Dill, D.L., 1993, "Model-checking in dense real-time", <i>Information and Computation</i>, Vol. 104, No. 1, pp. 2-34.</div></li>
+<li><div>Alur, R. and Dill, D., 1990, "Automata for modeling real-time 
+systems", Lecture Notes in Computer Science, Vol. 443, pp. 322-335.</div></li>
+<li><div>Berthomieu, B. and Diaz, M., 1991, "Modelling and verification 
+of time dependent systems using time Petri nets", IEEE Trans. on 
+Software Engineering, Vol. 17, No. 3, pp. 259-273.</div></li>
+<li><div>Berthomieu, B. and Menasche, M., 1983, "An enumerative approach
+ for analyzing time Petri nets", in: Information Processing: proceedings
+ of the IFIP congress 1983, R.E.A. Mason, Ed., Vol. 9. Elsevier Science 
+Publishers, Amsterdam, pp. 41-46.</div></li>
+<li><div>Berthomieu, B., and Vernadat, F., 2003, "State class 
+constructions for branching analysis of time Petri nets", Lecture Notes 
+in Computer Science, Vol. 2619, pp. 442-457.</div></li>
+<li><div>Berthomieu, B., Ribet, P.O. and Vernadat, F., 2004, "The tool 
+TINA construction of abstract state spaces for petri nets and time petri
+ nets", <i>Int. J. Prod. res.</i>, Vol. 42, No. 14, pp. 2741-2756.</div></li>
+<li><div>Boucheneb, H., Gardey, G. and Roux, O.H., 2006, "TCTL model 
+checking of Time Petri Nets", IRCCyN Technical report number RI2006-14.</div></li>
+<li><div>Clarke, E.M. and Emerson, E.A., 1981, "Design and synthesis of 
+synchronization skeletons using branching time temporal logic," in: 
+Proc. Workshop on Logics of Programs, Vol. 131, Berlin: Springer Verlag,
+ pp. 52-71.</div></li>
+<li><div>Cortes, L.A., Eles, P. and Peng, Z., 2003, "Modeling and formal
+ verification of embedded systems based on a Petri net representation", 
+Journal of Systems Architecture, Vol. 49, pp. 571-598.</div></li>
+<li><div>Dill, D.L., 1989, "Timing assumptions and verification of 
+finite-state concurrent systems", in Automatic Verification Methods for 
+Finite State Systems, pp. 197-212.</div></li>
+<li><div>Emerson, E.A., Jutla, C.S. and Sistla, A.P., 1993, "On 
+model-checking for fragments of µ-calculus", in Computer Aided 
+Verification, pp. 385-396.</div></li>
+<li><div>del Foyo, P.M.G. and Silva, J.R., 2008, "The verification of 
+real time systems using the Tina tool," in: Proceedings of the IFAC 
+World Congress, Seul, Korea, pp. 525-533.</div></li>
+<li><div>Ghezzi, C., Mandrioli, D., Morasca, S. and Pezze, M., 1991, "A 
+unified high-level Petri net formalism for time-critical systems", <i>IEEE Trans. on Software Engineering</i>, Vol. 17, No. 2, pp. 160-172.</div></li>
+<li><div>Hadjidj, R. and Boucheneb, H., 2008, "Improving state class 
+constructions for CTL* model checking of time Petri nets", STTT, Vol. 
+10, No. 2, pp. 167-184.</div></li>
+<li><div>Henzinger, T., Nicollin, X., Sifakis, J. and Yovine S., 1992, 
+"Symbolic Model Checking for Real-Time Systems", in 7th. Symposium of 
+Logics in Computer Science. Santa-Cruz, California: IEEE Computer 
+Scienty Press, pp. 394-406.</div></li>
+<li><div>Larsen, K.G., Pettersson, P. and Yi, W., 1997, "UPPAAL in a Nutshell", <i>Int. Journal on Software Tools for Technology Transfer</i>, Vol. 1, No. 1-2, pp. 134-152.</div></li>
+<li><div>Lime, D. and Roux, O.H., 2006, "Model checking of time Petri nets using the state class timed automaton", <i>Discrete Event Dyn. Syst.</i>, Vol. 16, pp. 179-206.</div></li>
+<li><div>Merlin, P. and Faber, D., 1976, "Recoverability of communication protocolsimplications of a theoretical study", <i>IEEE Transactions on Communications </i>[legacy, pre-1988], Vol. 24, No. 9, pp. 1036-1043.</div></li>
+<li><div>Ramchandani, C., 1974, "Analysis of asynchronous concurrent 
+systems by timed Petri nets", Massachusetts Institute of Technology, 
+Cambridge, MA, USA, Tech. Report.</div></li>
+<li><div>Sifakis, J., 1980, "Performance evaluation of systems using 
+nets", in: Proceedings of the Advanced Course on General Net Theory of 
+Processes and Systems. London, UK: Springer-Verlag, pp. 307-319.</div></li>
+<li><div>Tsai, J.J.P., Yang, S.J. and Chang, Y.H., 1995, "Timing 
+constraint Petri nets and their application to schedulability analysis 
+of real-time system specifications", <i>IEEE Trans. on Software Engineering</i>, Vol. 21, No. 1, pp. 32-49.</div></li>
+<li><div>Virbitskaite, I. and Pokozy, E., 1999, "A partial order method 
+for the verification of time Petri nets", in: FCT, G. Ciobanu and G. 
+Paun, Eds., Vol. 1684. Springer Verlag, pp. 547-558.</div></li>
+<li><div>Wang, J., Deng, Y. and Xu, G., 2000, "Reachability analysis of real-time systems using time petri nets", <i>IEEE Transactions on Systems, Man and Cybernetics</i>, Vol. 30, No. 5, pp. 725-736.</div></li>
+<li><div>Wang F., 2004, "Formal verification of timed systems: A survey 
+and perspective", Proceedings of the IEEE, Vol. 92, No. 8, pp. 
+1283-1305.</div></li>
+<li><div>Yoneda T. and Ryuba, H., 1998, "CTL model checking of time Petri nets using geometric regions", <i>IEICE Trans. on Information and Systems</i>, Vol. E81-D, No. 3, pp. 297-396.</div></li>
+<li><div>Yovine, S., 1996, "Model checking timed automata", in: European Educational Forum: School on Embedded Systems, pp. 114-152.</div></li>
+<li><div>Zuberek, W.M., 1980, "Timed petri nets and preliminary 
+performance evaluation", in: ISCA '80: Proceedings of the 7th annual 
+symposium on Computer Architecture. New York, NY, USA: ACM Press, pp. 
+88-96.</div></li>
+</ul></div>
+</div>
+<div class="articleSection"><a name="articleSection2"></a>
+<h2></h2>
+<div class="ref-list">
+        1
+         PSPACE problems may incur memory consumption polynomials to the
+ input sizes in bit counts. 
+      
+        2
+         Conditions EE, AE and EA named after its transition state 
+relations: Exists-Exists, All-Exists and Exists-All respectively. 
+      
+        3
+         PTIME problems can be solved with time complexity polynomials 
+to the input sizes in bit counts.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates"><a name="articleSection2"></a>
+<h1 class="articleSectionTitle">Publication Dates</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>26&nbsp;Jan&nbsp;2012</li>
+<li>
+<strong>Date of issue</strong><br>Dec&nbsp;2011</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History"><a name="articleSection3"></a>
+<h1 class="articleSectionTitle">History</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>13&nbsp;Aug&nbsp;2010</li>
+<li>
+<strong>Accepted</strong><br>07&nbsp;Apr&nbsp;2011</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">About the authors</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Pedro M. González del Foyo </strong><br><div>
+          ,&nbsp; Recife,&nbsp; 
+          ,&nbsp; Pernambuco,&nbsp; 
+        ,&nbsp; Universidade Federal de Pernambuco,&nbsp; Dept. of 
+Mechanical Engineering ,&nbsp; Brazil,&nbsp; pedro.foyo@ufpe.br</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> José Reinaldo Silva </strong><br><div>
+          ,&nbsp; São Paulo,&nbsp; 
+          ,&nbsp; São Paulo,&nbsp; 
+        ,&nbsp; Universidade de São Paulo,&nbsp; Dept. of Mechatronics 
+and Mechanical Systems ,&nbsp; Brazil,&nbsp; reinaldo@usp.br</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figures | Tables | Formulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figures
+                    (8)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Formulas
+                    (3)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 7</strong><br>
+</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiga10fig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablea10tab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/bdf5c8c4d1985b7cdcf2be4726dc36c38583e8a2.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/bdf5c8c4d1985b7cdcf2be4726dc36c38583e8a2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/c4c064904e60e866d3184b0fa376123b64df4f93.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/c4c064904e60e866d3184b0fa376123b64df4f93.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/cd8cd3833462a21c78962c93f170bf18c110a5c7.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/cd8cd3833462a21c78962c93f170bf18c110a5c7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/d3d56986ff0b0e4b6705234d620638f7623fb52f.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/d3d56986ff0b0e4b6705234d620638f7623fb52f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/9203b310651458bbe171e4526d9bab97dbd51252.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/9203b310651458bbe171e4526d9bab97dbd51252.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/a4c7b97affaa3e4449f0a2cd760104e84456af71.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/a4c7b97affaa3e4449f0a2cd760104e84456af71.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/8bdc27e612eff54da4cc4530eb5f265819260864.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 7<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/8bdc27e612eff54da4cc4530eb5f265819260864.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiga10fig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/ae8f88edcf39a4435eefa8eb02cd541e644f9097.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/ae8f88edcf39a4435eefa8eb02cd541e644f9097.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablea10tab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/ce006b5a65c680326a83fe74fa1b0a41c2c54cd4.jpg" target="_blank" data-placement="left" title="" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/ce006b5a65c680326a83fe74fa1b0a41c2c54cd4.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/150db27324af089b625c948800f191db5b37d13d.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/150db27324af089b625c948800f191db5b37d13d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/35a54d189f8dcb691651304434869a516cf6b2a6.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/35a54d189f8dcb691651304434869a516cf6b2a6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/7c38f538f0f825c291fb7e107cee8e19030cb91b.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/7c38f538f0f825c291fb7e107cee8e19030cb91b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg154cb29a4d01099041c413ef6d26c2efc407e8b9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/154cb29a4d01099041c413ef6d26c2efc407e8b9.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/154cb29a4d01099041c413ef6d26c2efc407e8b9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg6129c1d82de97c950c48ba95a6b72147d7e6ff74" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/6129c1d82de97c950c48ba95a6b72147d7e6ff74.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/6129c1d82de97c950c48ba95a6b72147d7e6ff74.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc65ea408a96e441faf66556c31863f4cbc0d7fed" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/c65ea408a96e441faf66556c31863f4cbc0d7fed.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/c65ea408a96e441faf66556c31863f4cbc0d7fed.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgd256f936ff6130ea9a953c4f91f3c0a6bbe39fab" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/d256f936ff6130ea9a953c4f91f3c0a6bbe39fab.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/d256f936ff6130ea9a953c4f91f3c0a6bbe39fab.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgb460fc6100880f6a0e19c709a590f3e9c5443e9c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/b460fc6100880f6a0e19c709a590f3e9c5443e9c.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/b460fc6100880f6a0e19c709a590f3e9c5443e9c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgda6a47bd3667dd0833febbaafc0f94e792d59f04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="" href="https://minio.scielo.br/documentstore/1806-3691/C4swDYSCWz4LBYFy38pPQRt/da6a47bd3667dd0833febbaafc0f94e792d59f04.jpg" data-original-title="Open new window"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/da6a47bd3667dd0833febbaafc0f94e792d59f04.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">How to cite</h4>
+</div>
+<div class="modal-body">
+<p id="citation">Foyo, Pedro M. González del&nbsp;and&nbsp;Silva, José 
+ReinaldoSome issues in real-time systems verification using time Petri 
+Nets. Journal of the Brazilian Society of Mechanical Sciences and 
+Engineering [online]. 2011, v. 33, n. 4 [Accessed&nbsp;14 November 2022]
+ , pp. 467-474. Available from: 
+&lt;https://doi.org/10.1590/S1678-58782011000400010&gt;. Epub 
+26&nbsp;Jan&nbsp;2012. ISSN 1806-3691. 
+https://doi.org/10.1590/S1678-58782011000400010.</p>
+<input id="citationCut" type="text" value="Foyo, Pedro M. González del&nbsp;and&nbsp;Silva, José ReinaldoSome issues in real-time systems verification using time Petri Nets. Journal of the Brazilian Society of Mechanical Sciences and Engineering [online]. 2011, v. 33, n. 4 [Accessed&nbsp;14 November 2022] , pp. 467-474. Available from: &lt;https://doi.org/10.1590/S1678-58782011000400010&gt;. Epub 26&nbsp;Jan&nbsp;2012. ISSN 1806-3691. https://doi.org/10.1590/S1678-58782011000400010."><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Foyo, Pedro M. González del and Silva, José ReinaldoSome issues in real-time systems verification using time Petri Nets. Journal of the Brazilian Society of Mechanical Sciences and Engineering [online]. 2011, v. 33, n. 4 [Accessed CURRENTDATE] , pp. 467-474. Available from: &lt;https://doi.org/10.1590/S1678-58782011000400010&gt;. Epub 26 Jan 2012. ISSN 1806-3691. https://doi.org/10.1590/S1678-58782011000400010.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto isCookiebarActive" data-fm-label="Go to top" href="#top" style="opacity: 1; position: fixed;">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download isCookiebarActive" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" style="opacity: 1; position: fixed;">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics isCookiebarActive" data-fm-label="Metrics" target="_blank" style="opacity: 1; position: fixed;">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein isCookiebarActive" data-fm-toogle="hover" style="opacity: 1; position: fixed;">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figures and tables" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versions and translations" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="How to cite this article" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Related articles" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein isCookiebarActive" data-fm-toogle="hover" style="opacity: 1;">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Go to top" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Metrics" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figures and tables" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versions and translations" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="How to cite this article" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Articles and alike" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Associação Brasileira de Engenharia e Ciências Mecânicas - ABCM</strong>
+        
+          Av. Rio Branco, 124 - 14. Andar, 20040-001 Rio de Janeiro RJ - Brazil, Tel.: +55 21 2221-0438, Fax: +55 21 2509-7129 -
+        
+        
+          Rio de Janeiro -
+        
+        
+           RJ -
+        
+        
+           Brazil <br>
+        
+        
+        
+          <b>E-mail:</b> abcm@abcm.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="https://www.scielo.br/journal/jbsmse/feed/" data-toggle="tooltip" title="" target="_blank" data-original-title="RSS of this journal's latest issue">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Stay informed of issues for this journal through your RSS reader
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">PDF version for download</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target="_blank" href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en&amp;format=pdf">
+                      
+                        English
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Related articles</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=%22Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%22%20%22Foyo,%20Pedro%20M.%20Gonz%C3%A1lez%20del%22%20%22Silva,%20Jos%C3%A9%20Reinaldo%22%20%222011%22%20%22Journal%20of%20the%20Brazilian%20Society%20of%20Mechanical%20Sciences%20and%20Engineering%22" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=%22Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%22%20%22Foyo,%20Pedro%20M.%20Gonz%C3%A1lez%20del%22%20%22Silva,%20Jos%C3%A9%20Reinaldo%22%20%222011%22%20%22Journal%20of%20the%20Brazilian%20Society%20of%20Mechanical%20Sciences%20and%20Engineering%22" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="https://www.scielo.br/j/jbsmse/a/C4swDYSCWz4LBYFy38pPQRt/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="https://www.scielo.br/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/oa_logo_32.png">
+      <span>
+        <strong>Read</strong> our Open Access Statement
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Metrics</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank" href="http://analytics.scielo.org/w/accesses?document=S1678-58782011000400010&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1678-58782011000400010" data-legend="never" data-style="small_circle" data-dimensions-badge-installed="true">
+                                    <a class="__dimensions_Link" href="https://badge.dimensions.ai/details/doi/10.1590/S1678-58782011000400010?domain=https://www.scielo.br" target="_blank" style="display: none;" referrerpolicy="no-referrer-when-downgrade"><div class="__dimensions_Badge __dimensions_Badge_style_small_circle"><div class="__dimensions_Badge_Image">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+    <defs>
+      <filter id="bwxms-blur" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="40"></feGaussianBlur>
+      </filter>
+      <mask id="bwxms-shape-mask">
+        <path fill="white" d="M546.5,287.3l-111.8-194c-1.8-3-4.1-5.6-6.7-7.7c-2.2-2.7-5.4-4.3-8.9-4.5c-2.3-0.7-4.7-1-7-1
+          L188.2,80c-9.3,0-18,5-22.6,13.1l-112,193.8c-4.7,8.1-4.7,18,0,26.1l111.9,193.9c4.7,8.1,13.3,13,22.6,13.1l223.9,0.1
+          c9.3,0,17.9-4.8,22.6-12.8l112-193.7l0,0C551.1,305.1,551.2,295.4,546.5,287.3z M516.6,287.4l-41.5,0.1l-26.7-118.2L516.6,287.4z
+           M337.2,106.2l-114.5,36.3l-20.3-36.4L337.2,106.2z M180.7,119l20.1,36.2L112,237.7L180.7,119z M181,481.8l-69.3-120l89.2,84
+          L181,481.8z M203.3,493.8l19.6-35.6l114.6,35.7L203.3,493.8z M408.1,489.3l-152.7-47.5l-32.3-10.6l-25.3-23.2L82.6,299.6
+          l114.6-106.9l25-23.1v-0.2l0.7-0.2l32.4-10.7l153.6-48.7l35.5,156.6l7.5,33.4l-7.6,33.5L408.1,489.3z M447.1,432.9l27.9-120.3
+          l41.7-0.1L447.1,432.9z"></path>
+      </mask>
+      <g id="bwxms-gradient" filter="url(#bwxms-blur)">
+        <g>
+          <path fill="#006EB6" d="M0,0l300,300v-424.4C182.9-124.4,76.8-76.9,0,0z"></path>
+          <path fill="#28348A" d="M300-124.4V300L600,0C523.2-76.9,417.1-124.4,300-124.4z"></path>
+          <path fill="#E20613" d="M600,600c76.8-76.8,124.3-182.9,124.3-300H300L600,600z"></path>
+          <path fill="#DA0078" d="M300,300h424.4c0-117.1-47.5-223.2-124.3-300L300,300z"></path>
+          <path fill="#5BC4F1" d="M-124.4,300H300L0,0C-76.9,76.8-124.4,182.9-124.4,300z"></path>
+          <path fill="#A1C517" d="M0,600l300-300h-424.4C-124.4,417.1-76.9,523.2,0,600z"></path>
+          <path fill="#F08800" d="M300,724.4c117.1,0,223.2-47.5,300-124.3L300,300V724.4z"></path>
+          <path fill="#FFCB00" d="M300,724.4V300L0,600C76.8,676.9,182.9,724.4,300,724.4z"></path>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <div class="__db_background"></div>
+
+  <div class="__db_shape">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" xlink="http://www.w3.org/1999/xlink">
+      <use mask="url(#bwxms-shape-mask)" xlink:href="#bwxms-gradient"></use>
+    </svg>
+  </div>
+
+  <div class="__db_score __db_score_normal">5</div>
+  <div class="__db_label">CITATIONS</div>
+
+  <img src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/badge.png" class="__dimensions_png" alt="5 total citations on Dimensions.">
+</div>
+</div></a></span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1678-58782011000400010">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class="altmetric-embed" data-badge-type="donut" data-doi="10.1590/S1678-58782011000400010" data-link-target="_blank" data-uuid="0a1e3851-a48c-41fb-4c5a-9406ea1d137d"><a style="cursor: pointer; display: inline-block; background-image: url(&quot;https://badges.altmetric.com/?size=64&amp;score=?&amp;types=????????&amp;style=donut&quot;); background-repeat: no-repeat; width: 64px; height: 64px;" href="https://www.altmetric.com/details.php?domain=www.scielo.br&amp;doi=10.1590%2Fs1678-58782011000400010" target="_blank"> </a></div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&amp;doi=10.1590/S1678-58782011000400010">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1678-58782011000400010"><a href="https://www.scienceopen.com/document?vid=e0349d36-8527-4906-97c0-77af7b3990f3" target="_blank"><svg height="70" viewBox="0 0 16 16" width="70"><g fill="#92d050"><path d="m13.71.23a3.16 3.16 0 0 1 1.29.83 3.58 3.58 0 0 1 .79 1.41 5.21 5.21 0 0 1 .21 1v-3.47h-3.39a5.09 5.09 0 0 1 1.1.23z"></path><path d="m13 1.68a2.39 2.39 0 0 0 -1.1-.23 2.35 2.35 0 0 0 -1.12.25 2.13 2.13 0 0 0 -.72.68 2.87 2.87 0 0 0 -.39 1 5.66 5.66 0 0 0 -.11 1.19 6.6 6.6 0 0 0 .11 1.31 2.59 2.59 0 0 0 .37 1 1.64 1.64 0 0 0 .7.63 2.44 2.44 0 0 0 1.11.22 2.24 2.24 0 0 0 1.12-.25 1.93 1.93 0 0 0 .72-.67 3.07 3.07 0 0 0 .39-1 5.76 5.76 0 0 0 .11-1.2 6.23 6.23 0 0 0 -.19-1.31 2.76 2.76 0 0 0 -.37-1 1.8 1.8 0 0 0 -.63-.62z"></path><path d="m15.78 6.46a4.07 4.07 0 0 1 -.78 1.54 3.62 3.62 0 0 1 -1.35.93 5 5 0 0 1 -1.86.32 5.52 5.52 0 0 1 -1.81-.27 3.1 3.1 0 0 1 -1.33-.88 3.55 3.55 0 0 1 -.78-1.42 7.28 7.28 0 0 1 -.26-2 6.51 6.51 0 0 1 .28-1.95 3.9 3.9 0 0 1 .82-1.47 3.41 3.41 0 0 1 1.35-.97 4.4 4.4 0 0 1 1.2-.29h-11.26v16h16v-10.59a6.72 6.72 0 0 1 -.22 1.05z"></path></g><path d="m6.49 6.44a2.8 2.8 0 0 1 -.26 1.22 2.48 2.48 0 0 1 -.73.88 3.32 3.32 0 0 1 -1.12.53 5.21 5.21 0 0 1 -1.38.18 5.9 5.9 0 0 1 -.87-.07 5.83 5.83 0 0 1 -.76-.18 3.3 3.3 0 0 1 -.55-.22 1.64 1.64 0 0 1 -.32-.2.84.84 0 0 1 -.15-.3 2.42 2.42 0 0 1 0-.61c0-.17 0-.31 0-.42a1 1 0 0 1 .02-.25.19.19 0 0 1 .09-.13.26.26 0 0 1 .14 0 .62.62 0 0 1 .29.13 4.37 4.37 0 0 0 .49.25 4.07 4.07 0 0 0 .68.25 2.58 2.58 0 0 0 .87.12 2.26 2.26 0 0 0 .55-.06 1.33 1.33 0 0 0 .42-.18.77.77 0 0 0 .27-.38.93.93 0 0 0 .09-.42.71.71 0 0 0 -.17-.47 1.56 1.56 0 0 0 -.44-.34 4.59 4.59 0 0 0 -.65-.23l-.7-.29a7.92 7.92 0 0 1 -.72-.35 3 3 0 0 1 -.58-.49 2.38 2.38 0 0 1 -.44-.7 2.61 2.61 0 0 1 -.17-1 2.5 2.5 0 0 1 .18-1.05 2.41 2.41 0 0 1 .65-.84 3.19 3.19 0 0 1 1-.53 4.56 4.56 0 0 1 1.42-.19 5.74 5.74 0 0 1 .74 0 4.89 4.89 0 0 1 .62.19 2.11 2.11 0 0 1 .49.18 1.68 1.68 0 0 1 .29.16.37.37 0 0 1 .12.14.38.38 0 0 1 .1.16v.24a3.16 3.16 0 0 1 0 .35v.4a.72.72 0 0 1 0 .24.26.26 0 0 1 -.08.13.28.28 0 0 1 -.13 0 .55.55 0 0 1 -.25-.1c-.12-.06-.26-.13-.44-.2s-.37-.14-.6-.21a3 3 0 0 0 -.77-.09 2.12 2.12 0 0 0 -.54.06.91.91 0 0 0 -.4.25.74.74 0 0 0 -.22.28.8.8 0 0 0 -.07.34.63.63 0 0 0 .17.47 1.61 1.61 0 0 0 .45.34 5.06 5.06 0 0 0 .65.28c.23.08.48.17.72.27a7 7 0 0 1 .73.35 3.1 3.1 0 0 1 .64.49 2.11 2.11 0 0 1 .45.7 2.35 2.35 0 0 1 .18 1z" fill="#7e7e7e"></path></svg>
+                  <div>ScienceOpen</div></a></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1678-58782011000400010" data-layout="vertical" data-tooltip-placement="right" data-show-zero="false" data-show-labels="false" data-fetched="true"><div class="poEjDAx2EewNn+kdnuCNbw=="><div class="scite-tally Tally__tally___wF-n7 Tally__show___EesAt Tally__badgeTally___AkCwi"><img class="Tally__logo___k79zv" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/logo.svg"><div class="Count__count___VwSFw"><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__publications___3dd2q Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">5</span></div></div><div class="Count__count___VwSFw"><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__supporting___6A01H Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div><div class="Count__count___VwSFw"><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__mentioning___eZSXr Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div><div class="Count__count___VwSFw"><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__contrasting___XemUp Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div></div></div><div class="AT5rL7aTm8KKajD1LMmpXg==" style="position: fixed; inset: 0px auto auto 0px; transform: translate(12px);" data-placement="right"><div class="MlC+r-CmnNCcLkgYD8Dr3A=="><img class="_80i+8Z8J94Dfk-D9w-MGTw==" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/logo.svg"><span class="WtCeh9Ck5GR+4htw+R1oCg==">Smart Citations</span><div class="JqOPSu81MQ6f4Zf9z+kqGA=="><div class="GPqI5vpEM4VpfAAz4n7HHw=="><div class="Count__count___VwSFw -hEUP2QMiuX6a9sr7dC-lw=="><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__publications___3dd2q Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">5</span></div></div><div class="Count__count___VwSFw -hEUP2QMiuX6a9sr7dC-lw=="><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__supporting___6A01H Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div><div class="Count__count___VwSFw -hEUP2QMiuX6a9sr7dC-lw=="><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__mentioning___eZSXr Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div><div class="Count__count___VwSFw -hEUP2QMiuX6a9sr7dC-lw=="><div class="Count__iconCountWrapper___CTSi2 Count__expandedIconCount___c3tc2"><i class="Icon__icon___rkFdu Icon__contrasting___XemUp Icon__smallIcon___3rDRZ"></i><span class="Count__number___4oBqJ">0</span></div></div></div><div class="LzVcQqdJWiY7N8-Sq-TVuQ=="><span class="f3QM6zcZemgDMSOwqIK2TA==">Citing Publications</span><span class="f3QM6zcZemgDMSOwqIK2TA==">Supporting</span><span class="f3QM6zcZemgDMSOwqIK2TA==">Mentioning</span><span class="f3QM6zcZemgDMSOwqIK2TA==">Contrasting</span></div></div><a class="_13xrsxGwhLy89Cqv+5JjQw==" href="https://scite.ai/reports/10.1590/s1678-58782011000400010" target="_blank" rel="noopener noreferrer">View Citations</a><div><p>See how this article has been cited at <a class="sUhEpXXzA4dizL2jxbvHFA==" href="https://scite.ai/" target="_blank" rel="noopener noreferrer">scite.ai</a></p><p class="bcxXMmw49C9aDY85vGYeXQ==">scite
+ shows how a scientific paper has been cited by providing the context of
+ the citation, a classification describing whether it supports, 
+mentions, or contrasts the cited claim, and a label indicating in which 
+section the citation was made.</p></div></div></div></div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1678-58782011000400010">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <div class="PlumX-Popup"><div class="ppp-container ppp-large"><a target="_blank" class="plx-wrapping-print-link" href="https://plu.mx/scielo/a/?doi=10.1590/S1678-58782011000400010" title="PlumX Metrics Detail Page"><div class="plx-print"><svg viewBox="0 0 100 100" width="100%" height="100%" aria-labelledby="widget-plumprint-1"><title id="widget-plumprint-1">Plum Print visual indicator of research metrics</title><path fill="#6e1a62" stroke="#6e1a62" stroke-width="1" d="M 36.075524746876404,57.96956599135724 C 47.24224000477168,47.68596460512846 53.05297314616313,51.90770935123954 46.72339182284403,65.70569425459581 L 53.27660817715597,65.70569425459581 C 46.94702685383687,51.90770935123954 53.50848354948492,47.05603274763565 65.39011014278067,61.891009356402684 L 69.44022058537712,49.42605112348201 C 51.10800228184648,54.443954426344064 47.6999155164263,44.307091132959926 72.60296140777912,38.400438331079556 L 54.04713951318945,24.918844582567147 C 56.12504326859532,50.42830474878893 45.431156649810006,50.31948464974809 44.538499283753495,31.333891577315434 L 33.935172486845104,39.03765943360823 C 51.71569819784488,45.75349794608412 49.12908117584119,53.493064614593585 34.05046952557818,51.73708687489691 Z"></path><circle fill="#6e1a62" stroke="#6e1a62" stroke-width="1" r="4" cx="32.880982706687234" cy="55.56230589874905"></circle><circle fill="#6e1a62" stroke="#6e1a62" stroke-width="1" r="4" cx="50" cy="68"></circle><circle fill="#c43bf3" stroke="#6e1a62" stroke-width="1" r="8" cx="71.77919422315901" cy="57.076489171186296"></circle><circle fill="none" stroke="#ffffff" stroke-width="1.5" r="6.5" cx="71.77919422315901" cy="57.076489171186296"></circle><circle fill="#6dd54d" stroke="#6e1a62" stroke-width="1" r="14" cx="68.04500724537893" cy="25.163178272689116"></circle><circle fill="none" stroke="#ffffff" stroke-width="1.5" r="12.5" cx="68.04500724537893" cy="25.163178272689116"></circle><circle fill="#fd5704" stroke="#6e1a62" stroke-width="1" r="8" cx="36.53971772250237" cy="31.4735108288137"></circle><circle fill="none" stroke="#ffffff" stroke-width="1.5" r="6.5" cx="36.53971772250237" cy="31.4735108288137"></circle></svg></div></a><div class="ppp-pop ppp-pop-right"><div class="ppp-branding"><img alt="plumX logo" class="plx-logo" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/plumx-inverse-logo.png"></div><ul><li class="plx-citation"><div class="ppp-title">Citations</div><ul><li class="plx-citation"><span class="ppp-label">Citation Indexes: </span><span class="ppp-count">6</span></li></ul></li><li class="plx-usage"><div class="ppp-title">Usage</div><ul><li class="plx-usage"><span class="ppp-label">Link-outs: </span><span class="ppp-count">2</span></li><li class="plx-usage"><span class="ppp-label">Abstract Views: </span><span class="ppp-count">165</span></li><li class="plx-usage"><span class="ppp-label">Full Text Views: </span><span class="ppp-count">2725</span></li></ul></li><li class="plx-capture"><div class="ppp-title">Captures</div><ul><li class="plx-capture"><span class="ppp-label">Readers: </span><span class="ppp-count">8</span></li></ul></li></ul><a target="_blank" href="https://plu.mx/scielo/a/?doi=10.1590/S1678-58782011000400010" title="PlumX Metrics Detail Page">see details</a></div></div></div>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://plu.mx/scielo/a/?doi=10.1590/S1678-58782011000400010">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scielo-bundle-min.js"></script>
+
+    
+      <script src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/cookiePolicy.min.js"></script><div class="alert-cookie-notification" style="background-color: rgb(31, 31, 31); font-family: Helvetica, sans-serif; font-weight: 100; color: rgb(255, 255, 255); font-size: 16px; display: block; position: fixed; bottom: 0px; width: 100%; text-align: center; padding: 13px 10px; z-index: 99999;">This site uses cookies to ensure you get a better browsing experience. Read our <a style="cursor: pointer; color: rgb(255, 255, 255); text-decoration: underline;" href="https://www.scielo.org/en/about-scielo/privacy-policy/" target="_blank">Privacy Policy</a>.<a class="btn" style="margin: 5px 5px 5px 15px; background-color: white; color: black; border-radius: 4px; border: 1px solid black; font-weight: 400; line-height: 20px; padding: 6px 16px; cursor: pointer;">OK</a></div>
+    
+
+    <script src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/api.js"></script>
+
+    
+  <script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/badge2.js" async="" defer="defer"></script>
+    <script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scienceopen.js"></script>
+  
+
+  
+    <script async="" type="application/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync="" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/latest.js" charset="utf-8"></script>
+
+    <!-- <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+    -->
+  
+
+  <script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/badge.js" charset="utf-8" async=""></script>
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('en');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  
+<script type="text/javascript" src="SciELO%20-%20Brazil%20-%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets%20Some%20issues%20in%20real-time%20systems%20verification%20using%20time%20Petri%20Nets_files/s1678-58782011000400010"></script></body></html>
