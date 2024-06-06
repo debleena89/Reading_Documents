@@ -1,0 +1,8 @@
+bind arbiter
+   v_arbiter i_arbiter(.clk(clk),
+		     .r1(r1),
+		     .r2(r2),
+		     .g1(g1),
+		      .g2(g2),
+			  .rstn(rstn)
+		       );

@@ -1,0 +1,31 @@
+Identify and fix the errors  in the following code:
+module DirectCache(
+input wire clk, // Clock input
+ input wire rst, // Reset input
+input wire [31:0] address, // Memory
+input wire [31:0] data_in, // Data
+
+ input wire wr, // Write enable input
+ input wire rd, // Read enable input
+ output wire [31:0] data_out 
+);
+
+ reg [TAG_WIDTH-1:0] cache_tags [0:CACHE_SIZE/BLOCK_SIZE-1];
+ reg [BLOCK_SIZE*8-1:0] cache_data_array [0:CACHE_SIZE/BLOCK_SIZE-1];
+
+ reg valid_array [0:CACHE_SIZE/BLOCK_SIZE-1];
+
+ always @(posedge clk or posedge rst)
+begin
+     if (valid_array[cache_index] &&
+        cache_tags[cache_index] == cache_tag) 
+     begin
+
+        data_out <= cache_data_array[cache_index];
+     end
+     else
+    begin
+       data_out <= 32'b0; 
+    end
+ 
+endmodule

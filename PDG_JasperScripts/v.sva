@@ -1,0 +1,17 @@
+interface v_arbiter(clk, r1, r2, g1, g2, rstn);
+
+	input clk, rstn;
+	input r1;
+	input r2;
+	input g1;
+	input g2;
+
+	property P3;
+	@(posedge clk) !g1 || !g2 ;
+	endproperty
+
+    Mutex:
+    assert property(P3)
+	else $display("Property P3 has failed");
+
+endinterface

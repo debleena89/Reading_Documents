@@ -1,0 +1,43 @@
+interface v_arbiter(clk, r1, r2, g1, g2, rstn);
+
+	input clk, rstn;
+	input r1;
+	input r2;
+	input g1;
+	input g2;
+
+	property P1;
+	@(posedge clk)
+	   r1|-> ##1 g1 ##1 g1;
+	endproperty
+
+    property P2;
+	@(posedge clk) !g1 |-> g2 ;
+	endproperty
+
+	property P3;
+	@(posedge clk) !g1 || !g2 ;
+	endproperty
+
+	property P4;
+	@(posedge clk) !r1 ##1 !r1 |-> ##1 !g1 ;
+	endproperty
+
+	GrantWhenRequest:
+	assert property(P1)
+	else $display("Property P1 has failed");
+
+    OneGrantHigh:
+    assert property(P2)
+	else $display("Property P2 has failed");
+
+    Mutex:
+    assert property(P3)
+	else $display("Property P3 has failed");
+
+    NoGrantWhenNoRequest:
+    assert property(P4)
+	else $display("Property P4 has failed");
+	
+
+endinterface
