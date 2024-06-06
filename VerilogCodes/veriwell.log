@@ -1,0 +1,51 @@
+
+
+Veriwell version 2.8.7, 
+Copyright (C) 1993-2008 Elliot Mednick and Mark Hummel
+
+Veriwell comes with ABSOLUTELY NO WARRANTY; This is free
+software, and you are welcome to redistribute it under the
+terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License,
+or (at your option) any later version. 
+
+lxt  support compiled in
+lxt2 support compiled in
+
+Entering Phase I...
+Compiling source file : ripple.v
+Compiling source file : stimulus_block.v
+
+Entering Phase II...
+Entering Phase III...
+No errors in compilation
+Top-level modules:
+   stimulus
+
+                   0output q =  0
+                  20output q =  1
+                  30output q =  2
+                  40output q =  3
+                  50output q =  4
+                  60output q =  5
+                  70output q =  6
+                  80output q =  7
+                  90output q =  8
+                 100output q =  9
+                 110output q = 10
+                 120output q = 11
+                 130output q = 12
+                 140output q = 13
+                 150output q = 14
+                 160output q = 15
+                 170output q =  0
+                 180output q =  1
+                 190output q =  2
+                 195output q =  0
+                 210output q =  1
+                 220output q =  2
+Exiting Veriwell at time 225
+0 Errors, 0 Warnings, Compile time = 0.0, Load time = 0.0, Simulation time = 0.0
+
+Normal exit
+Thank you for using Veriwell
