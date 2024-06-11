@@ -1,0 +1,26 @@
+Design Setup
+.....................................................
+Generating Project with the following settings:
+Project Name: Default_Project
+Core Configuration:
+Number of Cores: 4
+Data Width: 32 bits
+Five Stage Pipeline - Fully Bypassed
+Cache Configuration: L1 I$ and D$ + L2 LLC
+Number of L1 Caches 8
+L1 - Number of Sets: 32
+L1 - Number of Ways: 8
+L1 - Line Size (in bytes): 4
+L1 - Size: 1 kB
+L1 - Placement Policy: 8-way set associative
+L2 - Number of Sets: 32
+L2 - Number of Ways: 8
+L2 - Line Size (in bytes): 4
+L2 - Size: 1 kB
+L2 - Placement Policy: 8-way set associative
+Memory Bus Width: 4 bits
+Main Memory Configuration:
+Main Memory - Type: Synchronous
+Main Memory - Size: 16 kB
+.....................................................
+ 
