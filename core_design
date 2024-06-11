@@ -1,0 +1,141 @@
+cache coherence protocol design:
+
+With a viwe to design PMSI, we are designing a write
+invalidate snoopy based system with write back cache.
+
+why write invalidate?
+
+why write-back cache?
+ 
+
+Here in this Document we are designing system that is aim 
+to have multicore connected via shared interconnect. To support
+parallel processing multi core syystems are required.
+In a multi core system, single core with L1 private 
+cache are connected by a shared bus.
+
+write invalidate snoopy protocol on write-back cache.
+
+
+First e over all architecture: multi core setup
+
+Each component of a single core, L1 cache
+ 
+   The single core is consisted of PICORV-32 processor,
+connected with l1 cache which comprises of 2-way set associative 
+cache.This core is connected to a shared memory.
+
+Shared memory :
+ to provide bigger storage shared memory is required,
+
+
+Interconnection Network:
+Interconnection is the point of serialization of ordering requests 
+from cache controller. All cache controller must be able to see
+the messages from all of the cache controller.This is the responsibility
+of the interconnect to maintain the ordering of the request.
+
+
+(primer 2020)
+  
+The broadcast network must ensure that every coherence controller will observe
+the same sequence of request the way the requests are ordered. The total order
+ of the coherence requests must be preserved.
+
+ Through the interconnection network cache to cache and
+cache to memory communication takes place via cache 
+controller and memory controller. Requests are broadcasted to all coherence
+ controllers, including the initiated controller . The coherence requests
+ passes through an ordered broadcast network.
+
+
+typically travel on an ordered
+broadcast network, such as a bus. The ordered broadcast ensures that every coherence controller
+observes the same series of coherence requests in the same order, i.e., that there is a total order of
+coherence requests. Since a total order subsumes all per-block orders, this total order guarantees
+that all coherence controllers can correctly update a cache block’s state.
+
+The way we are trying to implement 
+Snoopy protocol:
+  In case of snoopy protocol, if a miss(read/write) occurs at a core, 
+first it ask the sister cores by broadcasting the physical address of the block.
+If any of the sister core has the block, gives the data back to 
+the processor.If that block is not present in any of the 
+sister cores, then the cache controller asks the memory
+controller for the data, and get the data from shared memory.
+
+The coherence controller of a core puts the following requests:-
+
+
+   [[One  method  of  enforcing  coherence  is  to  ensure  that  a  processor  has  exclusive  access to a data item before it writes that item. This style of protocol is called a write invalidate protocol because it invalidates copies in other caches on a write. Exclusive access ensures that no other readable or writable copies of an item exist when the write occurs: all other cached copies of the item are invalidated.-]]--Patterson, page 468.
+
+1) bus_invalidate: when a core gets a write hit in its local cache(L1) on shared block,
+     then it broadcats a bus_invalidate requests, to inform 
+other cores that it has updated the block, other core must invalidate their copy.
+ If the core has the data in Modified state, then it can update the data, due to 
+Single Write Multiple Read principle, onle One core can have data in Modified state.
+ So, if the current core has the data in Modified state, no request should be put
+for invalidation.
+
+   If A core does not have the block in its local(L1) cache,
+miss occurs and the coherence controller check the presenence
+of the block in other cores connected to that interconnection network
+by putting either bus_rd or bus_wr requests.
+
+   2)bus_rd : when a core gets a read miss in L1, it asks the other 
+cores by putting the bus_rd request in the interconnection network. 
+
+   3) bus_wr: when a core gets a read miss in L1, it asks the other 
+cores by putting the bus_wr request in the interconnection network. 
+
+
+  For, bus_rd and Bus_wr, requests are broadcasted, and if any of
+ the core has the  block in their cache, sends back the data to the
+requesting core.
+
+   If the data are in shared state in other cores, then, the data are 
+ passed to the requesting core through the bus and the states are not
+ changed if it is a bus_rd request. But if it is a bus_wr request, other
+cores invalidates their block.
+ 
+   If the data are in Modified state in any of the core,
+
+Address 
+Bus_requests
+
+Cache and Bus communication:
+
+Cache sends Bus request
+1) Put Bus invalid: after write hit operation
+     On shared data  
+2) Put Bus read miss: after Cache read miss  occurs 
+3) Put Bus write miss: after Cache write miss occurs 
+
+Cache receive Bus requests:
+1) get Bus Invalidate: when other core writes on the data which
+ the processor has in shared state
+
+TO Address Bus requests:
+
+A)
+ change msi states 
+10 to 00
+
+
+2) get Bus read Miss:
+
+Some other core get a Cache read miss, if I have the data, that Bus hit for me then
+A) if I have have the data in shared state,  nothing to do  if Cache ro Cache transfer is not there, else send the data
+
+B) if I have the data in modified state, then will write back the data, changes to invalid state, if Cache to Cache transfer is there will send the data or after update mem then from reading the memory I will get the data
+
+3) get Bus write Miss:
+
+Some other core get a Cache write miss, if I have the data, a Bus hit for me:
+
+A) if I have the data in shared state, write back the data , changes to Invalid state
+
+B) if I have the data in modified state write back the data and changes to invalid state. 
+
+
+

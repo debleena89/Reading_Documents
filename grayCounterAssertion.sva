@@ -1,0 +1,41 @@
+interface gcr_property(clk, x1, x2, rstn);
+
+  input clk, rstn;
+  input x1;
+  input x2;
+
+   property assert_11;
+   @(posedge clk) (x1 && x2) |-> ##1 (~x1 && x2)||(x1 && ~x2);
+   endproperty
+
+   property assert_01;
+   @(posedge clk) (~x1 && x2) |-> ##1 (~x1 && ~x2) || (x1 && x2);
+   endproperty
+
+   property assert_00;
+   @(posedge clk) (~x1 && ~x2) |-> ##1 (~x1 && x2) || (x1 && ~x2);
+   endproperty
+
+   property assert_10;
+   @(posedge clk) (x1 && ~x2) |-> ##1 (~x1 && ~x2) || (x1 && x2);
+   endproperty
+
+   assert_11_check:
+   assert property(assert_11)
+   else $display("property assert_11 failed");
+  
+   assert_01_check:
+   assert property(assert_01)
+	else $display("property assert_01 failed");
+
+   assert_00_check:
+   assert property(assert_00)
+   else $display("property assert_00 failed");
+
+
+   assert_10_check:
+   assert property(assert_10)
+   else $display("property assert_10 failed");
+	   
+
+	endinterface

@@ -1,0 +1,49 @@
+     1	14:51	vi bsram.v
+     2	14:52	jaspergold jg_6s7.tcl &
+     3	14:53	vi bsram.v
+     4	14:56	pdw
+     5	14:56	pwd
+     6	14:56	ls
+     7	14:56	vi fetch.v
+     8	14:57	ls
+     9	14:57	vi mem_interface.v
+    10	14:58	vi fetch.v
+    11	14:58	vi jg_6s7.tcl
+    12	14:58	jaspergold jg_6s7.tcl &
+    13	14:59	grep -i "mem.sram" -print
+    14	14:59	grep -i "mem.sram" *.v
+    15	14:59	vi bsram.v
+    16	15:00	vi jg_6s7.tcl
+    17	15:16	pwd
+    18	15:16	cd Benchmarks/verilogEBMCBenchmarks/cache_coherence/
+    19	15:16	pwd
+    20	15:28	ls
+    21	15:28	cd tools/
+    22	15:28	ls
+    23	15:28	cd JASPER2209/
+    24	15:28	ls
+    25	15:28	cd tools
+    26	15:28	ls
+    27	15:28	cd ..
+    28	15:28	ls
+    29	15:28	cd ..
+    30	15:29	jaspergold
+    31	15:30	ls
+    32	15:30	cd EBMC/
+    33	15:30	ls
+    34	15:31	cd ebmc
+    35	15:31	ls
+    36	15:31	cd
+    37	15:31	ls
+    38	15:31	cd Benchmarks/
+    39	15:31	ls
+    40	15:31	cd verilogEBMCBenchmarks/
+    41	15:31	ls
+    42	15:32	cd cache_coherence/
+    43	15:32	ls
+    44	15:32	jaspergold
+    45	15:46	vi cc.tcl
+    46	15:46	vi two_processor_bin_2.v
+    47	15:50	cd
+    48	15:50	cd history > out_history
+    49	15:51	history > out_history

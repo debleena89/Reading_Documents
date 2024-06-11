@@ -1,0 +1,51 @@
+
+
+memRead.v file is added by Debleena
+
+Function: is to load the memory(here sram) with the instructions from .mem file.
+
+here sum.mem is used.
+c code for sum.mem:
+
+int main(void)
+{
+	 int n1, n2, answer;
+	 n1 = 48;
+
+	 n2 = 64;
+
+	 answer = n1 + n2;
+
+	 return answer;
+
+}
+
+I got sum.mem file after running the command :
+
+   ./comile.sh sum 128
+
+=================================================================   
+
+Changes are done only in the bsram.v files:->
+
+  1) At line number 51, readmem mem() is added by Debleena.
+
+  2) At line 52, sram declaration is commented by Debleena.
+
+  3) Line 57, readData instruction is commented by Debleena.
+
+  4) Line 60, readData instruction added by Debleena.
+
+  5) Line 64, sram is changed to mem.sram by Debleena
+
+  Other module.v files are not changed.
+
+=====================================================================
+
+To run the full code write:
+
+ncverilog *.v
+===============================================================
+
+
+
